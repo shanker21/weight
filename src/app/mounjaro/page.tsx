@@ -2,11 +2,20 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { FaCalendarCheck, FaUserMd, FaVials, FaClipboardCheck, FaPills, FaHeartbeat } from "react-icons/fa";
 
-// Mock data - replace with your actual data
+  const steps = [
+    { icon: <FaCalendarCheck />, label: "Book Consultation" },
+    { icon: <FaUserMd />, label: "Visit Us" },
+    { icon: <FaVials />, label: "Medical Tests" },
+    { icon: <FaClipboardCheck />, label: "Discuss Best Plan" },
+    { icon: <FaPills />, label: "Treatment Begins" },
+    { icon: <FaHeartbeat />, label: "Monitoring Journey" },
+  ];
+
 const productData = {
   name: 'Mounjaro (Tirzepatide)',
-  brand: 'Eli Lilly',
+  brand: 'Eli Lilly and Company',
   description: 'Mounjaro is an injectable prescription medicine that may help adults with obesity or excess weight lose weight and keep it off. It contains the active ingredient Tirzepatide which works by targeting both GIP and GLP-1 receptors.',
   mainImage: '/images/mounjaro-main.jpeg',
   images: [
@@ -18,43 +27,43 @@ const productData = {
   variants: [
     {
       dosage: '2.5mg',
-      price: 199.99,
-      discountedPrice: 179.99,
+      price: 149.95,
+      weeklyPrice: 37.49,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '5mg',
-      price: 219.99,
-      discountedPrice: 199.99,
+      price: 149.95,
+      weeklyPrice: 37.49,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '7.5mg',
-      price: 239.99,
-      discountedPrice: 219.99,
+      price: 169.95,
+      weeklyPrice: 42.49,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '10mg',
-      price: 259.99,
-      discountedPrice: 239.99,
+      price: 189.95,
+      weeklyPrice: 47.49,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '12.5mg',
-      price: 279.99,
-      discountedPrice: 259.99,
+      price: 209.95,
+      weeklyPrice: 52.49,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '15mg',
-      price: 299.99,
-      discountedPrice: 279.99,
+      price: 209.95,
+      weeklyPrice: 52.49,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
@@ -62,11 +71,11 @@ const productData = {
   features: [
     'Helps regulate appetite and food intake',
     'Weekly injection for convenience',
-    'Clinically proven for weight loss',
+    'Lose around 22.5% of initial body weight',
     'May help improve blood sugar control',
   ],
   howToUse: [
-    'Inject once weekly on the same day each week',
+    'Our clinicians will discuss your preferred treatment plan and routine with you',
     'Can be taken with or without food',
     'Rotate injection sites (abdomen, thigh, or upper arm)',
     'Follow dosage instructions carefully',
@@ -121,7 +130,7 @@ export default function MounjaroPage() {
   };
 
   const totalPrice = (
-    productData.variants[selectedVariant].discountedPrice * quantity
+    productData.variants[selectedVariant].weeklyPrice * quantity
   ).toFixed(2);
 
   return (
@@ -222,16 +231,16 @@ export default function MounjaroPage() {
                     key={index}
                     onClick={() => handleVariantSelect(index)}
                     disabled={!variant.inStock}
-                    className={`px-4 py-2 rounded-md border transition-all ${selectedVariant === index ? 'bg-blue-100 border-blue-500 text-blue-700' : 'border-gray-300 hover:border-gray-400'} ${!variant.inStock ? 'opacity-50 cursor-not-allowed' : ''}`}
+                    className={`px-4 py-2 rounded-md border transition-all ${selectedVariant === index ? 'bg-blue-100 border-blue-500 text-blue-700' : 'border-gray-300 hover:border-gray-400 text-gray-700'} ${!variant.inStock ? 'opacity-50 cursor-not-allowed' : ''}`}
                   >
                     <div className="font-medium">{variant.dosage}</div>
-                    <div className="text-sm">
+                    {/* <div className="text-sm">
                       {variant.inStock ? (
                         <span className="text-green-600">In Stock</span>
                       ) : (
                         <span className="text-red-500">Out of Stock</span>
                       )}
-                    </div>
+                    </div> */}
                   </button>
                 ))}
               </div>
@@ -241,24 +250,25 @@ export default function MounjaroPage() {
             <div className="mb-6">
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-gray-900">
-                  £{productData.variants[selectedVariant].discountedPrice.toFixed(2)}
+                  £{productData.variants[selectedVariant].price.toFixed(2)}
                 </span>
-                {productData.variants[selectedVariant].discountedPrice < productData.variants[selectedVariant].price && (
+                {productData.variants[selectedVariant].weeklyPrice < productData.variants[selectedVariant].price && (
                   <>
-                    <span className="text-xl text-gray-500 line-through">
-                      £{productData.variants[selectedVariant].price.toFixed(2)}
+                    <span className="text-xl text-gray-500">
+                      £{productData.variants[selectedVariant].weeklyPrice.toFixed(2)} per week
                     </span>
-                    <span className="ml-2 bg-red-100 text-red-800 text-sm font-medium px-2 py-0.5 rounded">
-                      Save £{(productData.variants[selectedVariant].price - productData.variants[selectedVariant].discountedPrice).toFixed(2)}
-                    </span>
+                    {/* <span className="ml-2 bg-red-100 text-red-800 text-sm font-medium px-2 py-0.5 rounded">
+                      Save £{(productData.variants[selectedVariant].price - productData.variants[selectedVariant].weeklyPrice).toFixed(2)}
+                    </span> */}
                   </>
                 )}
               </div>
-              <p className="text-sm text-gray-500 mt-1">{productData.variants[selectedVariant].quantity}</p>
+              {/* <p className="text-sm text-gray-500 mt-1">{productData.variants[selectedVariant].quantity}</p> */}
+              <p className="text-sm text-gray-500 mt-1">Eligible for BMI of 30 kg/m2 or more</p>
             </div>
 
             {/* Quantity Selector */}
-            <div className="mb-6">
+            {/* <div className="mb-6">
               <h3 className="text-lg font-medium text-gray-900 mb-2">Quantity:</h3>
               <div className="flex items-center">
                 <button
@@ -283,11 +293,11 @@ export default function MounjaroPage() {
                   </svg>
                 </button>
               </div>
-            </div>
+            </div> */}
 
             {/* Add to Cart */}
             <div className="mb-8">
-              <button
+              {/* <button
                 className={`w-full py-3 px-4 rounded-md font-medium text-white transition-all ${productData.variants[selectedVariant].inStock ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'}`}
                 disabled={!productData.variants[selectedVariant].inStock}
               >
@@ -296,7 +306,14 @@ export default function MounjaroPage() {
                 ) : (
                   'Out of Stock'
                 )}
+              </button> */}
+
+              <button
+                className={`w-full py-3 px-4 rounded-md font-medium text-white transition-all ${productData.variants[selectedVariant].inStock ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'}`}
+              >
+                Start Journey
               </button>
+
             </div>
 
             {/* Features */}
@@ -315,6 +332,29 @@ export default function MounjaroPage() {
             </div>
           </div>
         </div>
+
+        {/* Journey */}
+        <div className="flex flex-col items-center py-10">
+      <h2 className="text-2xl font-bold text-center text-gray-600 mb-8">
+        How it Works
+      </h2>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-center gap-4">
+        {steps.map((step, index) => (
+          <div key={index} className="flex flex-col items-center text-center">
+            <div className="text-4xl mx-12 text-blue-500 bg-blue-100 p-4 rounded-full shadow-lg">
+              {step.icon}
+            </div>
+            <p className="mt-2 mx-2 text-lg font-small text-gray-700">{step.label}</p>
+            {index < steps.length && (
+              <div className="hidden md:block w-12 h-1 bg-blue-500 mt-4" />
+            )}
+            {index < steps.length -1  && (
+              <div className="md:hidden w-1 h-12 bg-blue-500 my-2" />
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
 
         {/* Tabs */}
         <div className="mt-12">
