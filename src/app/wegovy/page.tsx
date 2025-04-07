@@ -2,6 +2,8 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Header from "../../components/header";
+
 
 export default function WegovyPage() {
   const [selectedVariant, setSelectedVariant] = useState(0);
@@ -66,7 +68,9 @@ export default function WegovyPage() {
   };
 
   return (
+    <> <Header />
     <div className="min-h-screen bg-gray-50 py-8">
+     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumbs */}
         <nav className="flex mb-6" aria-label="Breadcrumb">
@@ -496,5 +500,6 @@ export default function WegovyPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
