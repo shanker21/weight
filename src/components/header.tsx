@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
+
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,11 +22,17 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 py-3">
-        <div className="flex justify-between items-center">
-          <Link href="/" className="text-2xl font-bold text-emerald-600">
-            WeightGone
-          </Link>
-
+      <div className="flex justify-between items-center">
+        <Link href="/" className="flex items-center text-2xl font-bold text-emerald-600">
+          <Image 
+            src="/images/logo.png"
+            alt="logo"
+            width={29}  
+            height={29}
+            className="mr-2"
+          />
+          WeightGone
+        </Link>
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {navItems.map((item) => (

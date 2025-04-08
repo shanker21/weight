@@ -68,9 +68,7 @@ export default function WegovyPage() {
   };
 
   return (
-    <> <Header />
     <div className="min-h-screen bg-gray-50 py-8">
-     
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumbs */}
         <nav className="flex mb-6" aria-label="Breadcrumb">
@@ -164,7 +162,7 @@ export default function WegovyPage() {
             {/* Add to Cart */}
             <div className="mb-8">
               <button
-                className={`w-full py-3 px-4 rounded-md font-medium text-white transition-all ${variants[selectedVariant].inStock ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed'}`}
+                className={`w-full py-3 px-4 rounded-md font-medium text-white transition-all ${variants[selectedVariant].inStock ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-gray-400 cursor-not-allowed'}`}
               >
                 Start Journey
               </button>
@@ -286,25 +284,25 @@ export default function WegovyPage() {
             <nav className="-mb-px flex space-x-8">
               <button
                 onClick={() => setActiveTab('how-to-take')}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'how-to-take' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'how-to-take' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >
                 How to Take
               </button>
               <button
                 onClick={() => setActiveTab('how-it-works')}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'how-it-works' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'how-it-works' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >
                 How it Works
               </button>
               <button
                 onClick={() => setActiveTab('who-is-it-for')}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'who-is-it-for' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'who-is-it-for' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >
                 Who is it For
               </button>
               <button
                 onClick={() => setActiveTab('side-effects')}
-                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'side-effects' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
+                className={`py-4 px-1 border-b-2 font-medium text-sm ${activeTab === 'side-effects' ? 'border-emerald-500 text-emerald-600' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >
                 Side Effects
               </button>
@@ -318,25 +316,25 @@ export default function WegovyPage() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4">How to Take Wegovy</h3>
                 <ul className="space-y-4  text-gray-800">
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span>Our clinicians will create a personalized treatment plan for you</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span>Inject once weekly on the same day each week</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span>Rotate injection sites (abdomen, thigh, or upper arm)</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="h-5 w-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
                     <span>Follow the recommended dose escalation schedule</span>
@@ -344,8 +342,8 @@ export default function WegovyPage() {
                 </ul>
 
                 <div className="mt-8 bg-blue-50 p-6 rounded-lg">
-                  <h4 className="text-lg font-medium text-blue-800 mb-3">Dosing Schedule</h4>
-                  <p className="text-blue-700">
+                  <h4 className="text-lg font-medium text-gray-800 mb-3">Dosing Schedule</h4>
+                  <p className="text-gray-700">
                     Wegovy treatment begins with a 4-week dose escalation period (0.25mg → 0.5mg → 1mg → 1.7mg) 
                     before reaching the maintenance dose of 2.4mg weekly. This gradual increase helps minimize side effects.
                   </p>
@@ -478,13 +476,13 @@ export default function WegovyPage() {
         <div className="mt-2 bg-green-50 p-2 rounded-lg border border-green-200">
           <div className="flex items-start">
             <div className="flex-shrink-0">
-              <svg className="h-8 w-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <svg className="h-8 w-8 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2h-1V9z" clipRule="evenodd" />
               </svg>
             </div>
             <div className="ml-3">
-              <h3 className="text-lg font-medium text-green-800">Start your weight-loss journy with Wegovy</h3>
-              <div className="mt-2 text-green-700">
+              <h3 className="text-lg font-medium text-emerald-800">Start your weight-loss journy with Wegovy</h3>
+              <div className="mt-2 text-emerald-700">
                 <p>
                   Wegovy is a prescription-only medication. You'll need to complete a consultation with one of our 
                   healthcare professionals to determine if it's suitable for you.
@@ -500,6 +498,5 @@ export default function WegovyPage() {
         </div>
       </div>
     </div>
-    </>
   );
 }

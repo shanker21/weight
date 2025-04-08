@@ -56,7 +56,17 @@ body {
 }
 
 .animate-float-gradient {
-  animation: float 5s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
   /* Alternative rotation animation: */
   /* animation: rotate 60s linear infinite; */
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optional: Add this if you want smoother scrolling */
+html {
+  scroll-behavior: smooth;
 }
