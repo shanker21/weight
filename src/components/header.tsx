@@ -14,8 +14,6 @@ export default function Header() {
     { name: "Treatments", href: "/treatments" },
     { name: "How It Works", href: "/how-it-works" },
     { name: "About Us", href: "/about" },
-    { name: "Reviews", href: "/reviews" },
-    { name: "Blog", href: "/blog" },
     { name: "Contact", href: "/contact" },
   ];
 

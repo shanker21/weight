@@ -30,14 +30,14 @@ export default function Home() {
       description:
         "FDA-approved weight loss medication that helps reduce appetite and calorie intake.",
       price: "£199/month",
-      link: "wegovy",
+      slug: "wegovy",
     },
     {
       name: "Mounjaro (Tirzepatide)",
       description:
         "Dual-action medication that regulates blood sugar and promotes weight loss.",
       price: "£249/month",
-      link: "mounjaro",
+      slug: "mounjaro",
     },
   ];
 
@@ -98,12 +98,18 @@ export default function Home() {
           Clinically approved treatments delivered discreetly across the UK
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
+          <Link
+          href="/consult">
+          <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
             Start My Consultation
           </button>
-          <button className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-md">
+          </Link>
+          <Link
+          href="/treatments">
+          <button className="cursor-pointer border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-md">
             Browse Treatments
           </button>
+          </Link>
         </div>
       </div>
       <div className="relative rounded-xl overflow-hidden z-10">
@@ -242,8 +248,8 @@ export default function Home() {
                     <p className="text-xl font-bold text-gray-800 mb-4">
                       {treatment.price}
                     </p>
-                    <Link href={`/${treatment.link}`}>
-                      <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-200">
+                    <Link href={`/${treatment.slug}`}>
+                      <button className="cursor-pointer w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-200">
                         Learn More
                       </button>
                     </Link>
@@ -391,9 +397,12 @@ export default function Home() {
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Take the first step today with our safe, effective treatments.
           </p>
-          <button className="bg-white text-emerald-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
+          <Link
+          href="/consult">
+          <button className="cursor-pointer bg-white text-emerald-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
             Start My Consultation
           </button>
+          </Link>
         </div>
       </section>
       </ScrollAnimation>

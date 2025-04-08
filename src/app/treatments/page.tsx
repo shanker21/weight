@@ -16,7 +16,7 @@ export default function TreatmentsPage() {
       ],
       description:
         "Helps reduce appetite and calorie intake for effective weight management.",
-      image: "/wegovy-treatment.jpg",
+      image: "/images/wegovy-main.png",
     },
     {
       name: "Mounjaro (Tirzepatide)",
@@ -30,7 +30,7 @@ export default function TreatmentsPage() {
       ],
       description:
         "Regulates blood sugar and promotes weight loss through dual hormone action.",
-      image: "/mounjaro-treatment.jpg",
+      image: "/images/mounjaro-2.jpeg",
     },
   ];
 
