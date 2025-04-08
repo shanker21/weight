@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { CheckCircle, Truck, Shield, HeartPulse } from "lucide-react";
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
@@ -29,12 +30,14 @@ export default function Home() {
       description:
         "FDA-approved weight loss medication that helps reduce appetite and calorie intake.",
       price: "£199/month",
+      link: "wegovy",
     },
     {
       name: "Mounjaro (Tirzepatide)",
       description:
         "Dual-action medication that regulates blood sugar and promotes weight loss.",
       price: "£249/month",
+      link: "mounjaro",
     },
   ];
 
@@ -239,24 +242,70 @@ export default function Home() {
                     <p className="text-xl font-bold text-gray-800 mb-4">
                       {treatment.price}
                     </p>
-                    <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-200">
-                      Learn More
-                    </button>
+                    <Link href={`/${treatment.link}`}>
+                      <button className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-200">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center mt-12">
-            <button className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-medium py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-md">
-              Compare All Treatments
-            </button>
+          <div className="text-center mt-18">
+          <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              Compare Treatments
+            </span>
+            <h2 className="text-3xl font-bold text-gray-900">
+            Mounjaro vs. Wegovy 
+            </h2>
           </div>
+          <div className="py-12 px-4 sm:px-6 lg:px-8"> 
+  <div className="mx-auto max-w-4xl overflow-x-auto shadow-md rounded-lg">
+    <table className="min-w-full divide-y divide-gray-200" >
+    <caption className="caption-bottom text-gray-400">* Either BMI more than 30 or more than 27 with a cardiovascular disease </caption>
+      <thead className="bg-gray-50">
+        <tr>
+          <th className="px-6 py-3 text-center text-xs font-bold text-gray-500 uppercase tracking-wider">Treatment</th>
+          <th className="px-6 py-3 text-center text-xs font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50">Mounjaro</th>
+          <th className="px-6 py-3 text-center text-xs font-bold text-blue-700 uppercase tracking-wider bg-blue-50">Wegovy</th>
+        </tr>
+      </thead>
+      <tbody className="bg-white divide-y divide-gray-200">
+        <tr>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ingredient</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">Tirzepatide</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">Semaglutide</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Expected weight loss</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">around 20%</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">around 15%</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Frequency</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">Once a Week</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">Once a Week</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Eligibility</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">BMI over 30 *</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">BMI over 30 *</td>
+        </tr>
+        <tr>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Prescription Only</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">Yes</td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">Yes</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+      <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">

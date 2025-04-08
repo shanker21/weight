@@ -79,7 +79,7 @@ export default function MounjaroPage() {
         <nav className="flex mb-6" aria-label="Breadcrumb">
           <ol className="inline-flex items-center space-x-1 md:space-x-3">
             <li className="inline-flex items-center">
-              <a href="#" className="text-sm font-medium text-gray-700 hover:text-blue-600">
+              <a href="/" className="text-sm font-medium text-gray-700 hover:text-blue-600">
                 Home
               </a>
             </li>
