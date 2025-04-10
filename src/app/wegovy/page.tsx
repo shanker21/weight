@@ -10,7 +10,7 @@ export default function WegovyPage() {
   const [currentImage, setCurrentImage] = useState(0);
   const [activeTab, setActiveTab] = useState('how-to-take');
 
-  // Sample variants data - you can replace with your actual data
+
   const variants = [
     {
       dosage: '0.25mg',
@@ -51,9 +51,11 @@ export default function WegovyPage() {
   const dosages = '/images/wegovy-dosage.png';
   // Sample images - replace with your actual image paths
   const images = [
+    '/images/wegovy-main.png',
     '/images/wegovy-1.png',
     '/images/wegovy-2.png',
     '/images/wegovy-3.png',
+    '/images/wegovy-4.png',
   ];
 
   useEffect(() => {
@@ -77,6 +79,16 @@ export default function WegovyPage() {
               <a href="/" className="text-sm font-medium text-gray-700 hover:text-blue-600">
                 Home
               </a>
+            </li>
+            <li aria-current="page">
+              <div className="flex items-center">
+                <svg className="w-3 h-3 mx-1 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                </svg>
+              <a href="/treatments" className="text-sm font-medium text-gray-700 hover:text-blue-600">
+                <span className="ml-1 text-sm font-medium md:ml-2">Treatments</span>
+                </a>
+              </div>
             </li>
             <li aria-current="page">
               <div className="flex items-center">
@@ -131,7 +143,7 @@ export default function WegovyPage() {
 
             {/* Variant Selection */}
             <div className="mb-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Select Dosage:</h3>
+              {/* <h3 className="text-lg font-medium text-gray-900 mb-2">Select Dosage:</h3> */}
               <div className="flex flex-wrap gap-2">
                 {variants.map((variant, index) => (
                   <button
@@ -194,7 +206,7 @@ export default function WegovyPage() {
                   <svg className="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-700">Clinically proven</span>
+                  <span className="text-gray-700">FDA Approved</span>
                 </li>
               </ul>
             </div>
@@ -210,11 +222,6 @@ export default function WegovyPage() {
               It contains semaglutide, a GLP-1 receptor agonist that helps regulate appetite and calorie intake.
             </p>
             <p className="mt-4">
-              Wegovy (semaglutide) is the first FDA-approved weekly injectable medication specifically for chronic weight management. 
-              It works by mimicking the GLP-1 hormone that targets areas of the brain involved in appetite regulation, helping you feel 
-              fuller for longer and reducing calorie intake.
-            </p>
-            <p className="mt-4">
               In clinical trials, Wegovy helped patients lose an average of 15% of their body weight when combined with lifestyle changes. 
               The medication follows a carefully structured dose escalation schedule to help your body adjust and minimize side effects.
             </p>
@@ -222,8 +229,7 @@ export default function WegovyPage() {
               Wegovy is suitable for adults with a BMI of 30 or more, or 27 or more with at least one weight-related condition 
               (such as high blood pressure, type 2 diabetes, or high cholesterol).
             </p>
-            
-            {/* You can add more content, images, or tables here as needed */}
+
             {/* Example table: */}
             <div className="mt-4 flex justify-center">
             <div className="max-w-full md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
@@ -344,12 +350,9 @@ export default function WegovyPage() {
                 <div className="mt-8 bg-blue-50 p-6 rounded-lg">
                   <h4 className="text-lg font-medium text-gray-800 mb-3">Dosing Schedule</h4>
                   <p className="text-gray-700">
-                    Wegovy treatment begins with a 4-week dose escalation period (0.25mg → 0.5mg → 1mg → 1.7mg) 
-                    before reaching the maintenance dose of 2.4mg weekly. This gradual increase helps minimize side effects.
+                    Wegovy treatment begins with a 4-week dose escalation period, starting at 0.25mg and stepping up the dose every 4 weeks before reaching the maintenance dose of 2.4mg weekly. This gradual increase helps minimize side effects.
                   </p>
                 </div>
-
-                {/* You can add more content here as needed */}
               </div>
             )}
 
@@ -374,7 +377,7 @@ export default function WegovyPage() {
                   12-16 weeks of consistent use at the maintenance dose.
                 </p>
 
-                {/* You can add more content here as needed */}
+
               </div>
             )}
 
@@ -389,6 +392,9 @@ export default function WegovyPage() {
                   <li>Adults with obesity (BMI ≥ 30)</li>
                   <li>Adults who are overweight (BMI ≥ 27) with at least one weight-related condition</li>
                   <li>People with conditions like type 2 diabetes, high blood pressure, or high cholesterol</li>
+                  <li>People of racial ethnicities (Black African, African Caribbean
+                    , Asian, South Asian, Middle Eastern) who tend to have increased risk of obesity can start treatment at lower BMI (≥ 27).
+                  </li>
                 </ul>
 
                 <div className="mt-6 bg-yellow-50 p-4 rounded-md border border-yellow-200">
@@ -403,7 +409,6 @@ export default function WegovyPage() {
                   </ul>
                 </div>
 
-                {/* You can add more content here as needed */}
               </div>
             )}
 
@@ -455,7 +460,7 @@ export default function WegovyPage() {
                   </li>
                 </ul>
 
-                <div className="mt-6 bg-red-50 p-4 rounded-md border border-red-200">
+                {/* <div className="mt-6 bg-red-50 p-4 rounded-md border border-red-200">
                   <h4 className="font-medium text-red-800 mb-2">Serious Side Effects (seek medical help immediately if experienced):</h4>
                   <ul className="list-disc pl-5 space-y-1 text-red-700">
                     <li>Severe abdominal pain (possible pancreatitis)</li>
@@ -464,9 +469,9 @@ export default function WegovyPage() {
                     <li>Rapid heartbeat or palpitations</li>
                     <li>Thoughts of self-harm</li>
                   </ul>
-                </div>
+                </div> */}
 
-                {/* You can add more content here as needed */}
+
               </div>
             )}
           </div>
