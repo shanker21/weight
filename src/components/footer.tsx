@@ -17,7 +17,7 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <a
-                href="#"
+                href="/"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Home
@@ -25,7 +25,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
+                href="/treatments"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Treatments
@@ -33,7 +33,7 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
+                href="/how-it-works"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 How It Works
@@ -41,10 +41,18 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
+                href="/about-us"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contact"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                Contact
               </a>
             </li>
           </ul>
@@ -54,7 +62,7 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <a
-                href="#"
+                href="privacy-policy"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Privacy Policy
@@ -62,20 +70,20 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="#"
+                href="terms-of-service"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Terms of Service
               </a>
             </li>
-            <li>
+            {/* <li>
               <a
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 Cookie Policy
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div>
