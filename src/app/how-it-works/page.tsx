@@ -181,7 +181,7 @@ const HowItWorks = () => {
           className="mt-12 text-center"
         >
           <Link href="/consultation">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
+            <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
               Start Online Consultation
             </button>
           </Link>

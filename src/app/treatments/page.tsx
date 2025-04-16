@@ -30,7 +30,7 @@ export default function TreatmentsPage() {
       ],
       description:
         "Regulates blood sugar and promotes weight loss through dual hormone action.",
-      image: "/images/mounjaro-2.jpeg",
+      image: "/images/mounjaro-main.jpeg",
     },
   ];
 
@@ -69,7 +69,7 @@ export default function TreatmentsPage() {
                     src={treatment.image}
                     alt={treatment.name}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-95 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-gray-900/40 via-gray-900/10 to-transparent"></div>
                 </div>

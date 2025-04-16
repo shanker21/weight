@@ -6,20 +6,20 @@ import { motion } from 'framer-motion';
 
 export default function ConsultationPage() {
   return (
-    <div className="min-h-screen bg-gray-50 py-4 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 py-2 px-2 sm:px-4 lg:px-2">
 
 
           {/* Right Column - Semblance Iframe */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
-            className="bg-white p-4 rounded-xl border border-gray-200 h-fit top-4"
+            className="bg-white p-4 rounded-xl border border-gray-200 top-4"
           >
             
             <div className="aspect-w-16 aspect-h-9">
               <iframe 
-                src="https://your-semblance-embed-url.com" 
-                className="w-full h-[500px] border-0 rounded-lg"
+                src="http://semble.io" 
+                className="w-full h-screen border-0 rounded-lg"
                 allow="clipboard-write"
                 loading="lazy"
               ></iframe>
