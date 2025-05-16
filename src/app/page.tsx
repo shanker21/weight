@@ -1,11 +1,17 @@
 'use client';
 
 import Link from 'next/link';
-import { CheckCircle, Truck, Shield, HeartPulse } from "lucide-react";
+import { ReactNode } from 'react';
+import { CheckCircle, Users, Shield, HeartPulse } from "lucide-react";
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
 
-const ScrollAnimation = ({ children, delay = 0 }) => {
+interface ScrollAnimationProps {
+  children: ReactNode;
+  delay?: number;
+}
+
+const ScrollAnimation = ({ children, delay = 0 } : ScrollAnimationProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -28,7 +34,7 @@ export default function Home() {
     {
       name: "Wegovy (Semaglutide)",
       description:
-        "FDA-approved weight loss medication that helps reduce appetite and calorie intake.",
+        "MHRA-approved weight loss medication that helps reduce appetite and calorie intake.",
       price: "£199/month",
       slug: "wegovy",
     },
@@ -50,7 +56,7 @@ export default function Home() {
     {
       title: "Clinician Reviews Your Info",
       description:
-        "Our GMC-registered doctors will assess your suitability for treatment.",
+        "Our GPHC-registered doctors will assess your suitability for treatment.",
     },
     {
       title: "Treatment Delivered to Your Door",
@@ -101,7 +107,7 @@ export default function Home() {
           <Link
           href="/consult">
           <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
-            Start My Consultation
+            Book My Appointment
           </button>
           </Link>
           <Link
@@ -171,10 +177,10 @@ export default function Home() {
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center text-gray-800">
-                GMC-registered UK prescribers
+                GPHC-registered UK prescribers
               </h3>
               <p className="text-gray-600 text-center">
-                Our doctors are fully qualified and registered with the GMC.
+                Our doctors are fully qualified and registered with the GPHC.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
@@ -193,14 +199,14 @@ export default function Home() {
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
               <div className="flex justify-center mb-4">
                 <div className="bg-emerald-100 p-3 rounded-full">
-                  <Truck className="h-8 w-8 text-emerald-600" />
+                  <Users className="h-8 w-8 text-emerald-600" />
                 </div>
               </div>
               <h3 className="text-xl font-semibold mb-2 text-center text-gray-800">
-                Fast & discreet delivery
+                Face to Face Consultation
               </h3>
               <p className="text-gray-600 text-center">
-                Next-day delivery available in plain packaging.
+                Guaranteed confidentiality and personalized care.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
@@ -400,7 +406,7 @@ export default function Home() {
           <Link
           href="/consult">
           <button className="cursor-pointer bg-white text-emerald-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl">
-            Start My Consultation
+            Book My Appointment
           </button>
           </Link>
         </div>
