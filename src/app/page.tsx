@@ -1,11 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import { ReactNode } from 'react';
 import { CheckCircle, Users, Shield, HeartPulse } from "lucide-react";
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
 
-const ScrollAnimation = ({ children, delay = 0 }) => {
+interface ScrollAnimationProps {
+  children: ReactNode;
+  delay?: number;
+}
+
+const ScrollAnimation = ({ children, delay = 0 } : ScrollAnimationProps) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
