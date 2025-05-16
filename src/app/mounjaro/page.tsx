@@ -57,9 +57,11 @@ export default function MounjaroPage() {
 
   const dosages = '/images/mounjaro-dosage.png';
   const images = [
+    '/images/mounjaro-main.jpeg',
     '/images/mounjaro-1.jpeg',
-    '/images/mounjaro-2.jpeg',
+    '/images/mounjaro-2.png',
     '/images/mounjaro-3.jpeg',
+    '/images/mounjaro-4.jpeg',
   ];
 
   useEffect(() => {
@@ -82,6 +84,16 @@ export default function MounjaroPage() {
               <a href="/" className="text-sm font-medium text-gray-700 hover:text-blue-600">
                 Home
               </a>
+            </li>
+            <li aria-current="page">
+              <div className="flex items-center">
+                <svg className="w-3 h-3 mx-1 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 9 4-4-4-4"/>
+                </svg>
+              <a href="/treatments" className="text-sm font-medium text-gray-700 hover:text-blue-600">
+                <span className="ml-1 text-sm font-medium md:ml-2">Treatments</span>
+                </a>
+              </div>
             </li>
             <li aria-current="page">
               <div className="flex items-center">
@@ -131,7 +143,7 @@ export default function MounjaroPage() {
             <p className="text-lg text-gray-600 mb-4">by Eli Lilly</p>
 
             <div className="mb-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Select Dosage:</h3>
+              {/* <h3 className="text-lg font-medium text-gray-900 mb-2">Select Dosage:</h3> */}
               <div className="flex flex-wrap gap-2">
                 {variants.map((variant, index) => (
                   <button
@@ -296,7 +308,7 @@ export default function MounjaroPage() {
                 <div className="mt-8 bg-blue-50 p-6 rounded-lg">
                   <h4 className="text-lg font-medium text-gray-800 mb-3">Dosing Schedule</h4>
                   <p className="text-gray-700">
-                    Mounjaro treatment begins with a 4-week dose escalation period (2.5mg → 5mg → 7.5mg → 10mg → 12.5mg) 
+                    Mounjaro treatment begins with a 5-week dose escalation period (2.5mg → 5mg → 7.5mg → 10mg → 12.5mg → 15mg) 
                     before reaching the maintenance dose of 15mg weekly. This gradual increase helps minimize side effects.
                   </p>
                 </div>
@@ -307,8 +319,7 @@ export default function MounjaroPage() {
               <div className="prose max-w-none text-gray-800">
                 <h3 className="text-xl font-bold text-gray-900 mb-4">How Mounjaro Works</h3>
                 <p>
-                  Mounjaro is the first dual GIP and GLP-1 receptor agonist that targets multiple pathways involved in weight regulation 
-                  and metabolic function.
+                Mounjaro (tirzepatide) works by mimicking two hormones, GLP-1 and GIP, to improve blood sugar control and promote weight loss in individuals with type 2 diabetes
                 </p>
                 <p className="mt-4">
                   The medication works by:
@@ -401,17 +412,7 @@ export default function MounjaroPage() {
                   </li>
                 </ul>
 
-                <div className="mt-6 bg-red-50 p-4 rounded-md border border-red-200">
-                  <h4 className="font-medium text-red-800 mb-2">Serious Side Effects (seek medical help immediately):</h4>
-                  <ul className="list-disc pl-5 space-y-1 text-red-700">
-                    <li>Severe stomach pain (possible pancreatitis)</li>
-                    <li>Signs of allergic reaction</li>
-                    <li>Vision changes</li>
-                    <li>Gallbladder problems</li>
-                    <li>Kidney problems</li>
-                    <li>Depression or suicidal thoughts</li>
-                  </ul>
-                </div>
+                
               </div>
             )}
           </div>
