@@ -54,7 +54,7 @@ export default function Header() {
               href="/consultation" 
               className="hidden md:inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-200 whitespace-nowrap"
             >
-              Book a Consultation
+              Book an Appointment
             </Link>
 
             {/* Mobile menu button - shows earlier than default (lg instead of md) */}
