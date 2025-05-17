@@ -52,13 +52,13 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
+        <div className="min-h-screen bg-gray-50">
+            <div className="mx-auto">
                 {/* Page Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-16"
+                    className="text-center mb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-50 to-blue-50 py-20"
                 >
                     <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -66,7 +66,7 @@ export default function ContactPage() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div className="grid grid-cols-1 mx-2 lg:grid-cols-2 gap-12 lg:mx-6">
                     {/* Contact Form */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -239,7 +239,7 @@ export default function ContactPage() {
                     </motion.div>
                 </div>
                 {/* Google Maps Embed */}
-                <div className="bg-white p-4 mt-6 rounded-xl shadow-md border border-gray-200">
+                <div className="bg-white mx-2 p-4 mt-6 lg:mx-6 rounded-xl shadow-md border border-gray-200">
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">Find Us</h3>
                     <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                         <iframe
