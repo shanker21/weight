@@ -18,7 +18,7 @@ export default function ConsultationPage() {
             
             <div className="aspect-w-16 aspect-h-9">
               <iframe 
-                src="http://semble.io" 
+                src="https://online-booking.semble.io/?token=74c70d4c10ae5b5bcfdac5c09f6fca46953ae500" 
                 className="w-full h-screen border-0 rounded-lg"
                 allow="clipboard-write"
                 loading="lazy"

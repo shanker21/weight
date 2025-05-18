@@ -56,7 +56,7 @@ export default function Home() {
     {
       title: "Clinician Reviews Your Info",
       description:
-        "Our GPHC-registered doctors will assess your suitability for treatment.",
+        "Our GPHC-registered pharmacists will assess your suitability for treatment.",
     },
     {
       title: "Treatment Delivered to Your Door",
@@ -150,13 +150,14 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-gray-700 font-medium">
               Looking for weight loss in{" "}
               <span className="text-emerald-600 font-semibold">Manchester</span>{" "}
-              or weight loss in{" "}
-              <span className="text-emerald-600 font-semibold">London</span>?
-              You're in the right place.
+              {/* or weight loss in{" "}
+              <span className="text-emerald-600 font-semibold">London</span>*/}? 
+              <p className=" text-emerald-700 font-bold mt-4">You're in the right place!</p>
+              
             </p>
-            <p className="text-lg text-gray-600 mt-4">
-              We serve the entire UK with our online weight loss clinic.
-            </p>
+            {/* <p className="text-lg text-gray-600 mt-4">
+              We serve Manchester with our weight loss clinic.
+            </p> */}
           </div>
         </div>
       </section>
@@ -185,7 +186,7 @@ export default function Home() {
                 GPHC-registered UK prescribers
               </h3>
               <p className="text-gray-600 text-center">
-                Our doctors are fully qualified and registered with the GPHC.
+                Our pharmacists are fully qualified and registered with the GPHC.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
