@@ -9,22 +9,22 @@ import BMICalculator from '@/components/BMICalculator';
 const HowItWorks = () => {
   const steps = [
     {
-      title: "Online Consultation",
-      description: "Complete our simple health questionnaire in just 5 minutes",
+      title: "Book Appointment",
+      description: "Fix your consultation date and time through our booking page",
       icon: <ClipboardList className="w-8 h-8" />,
       color: "bg-blue-100",
       iconColor: "text-blue-600"
     },
     {
       title: "Medical Review",
-      description: "Our UK doctors review your information within 24 hours",
+      description: "Meet with our clinicians to discuss your medical history.",
       icon: <CheckCircle className="w-8 h-8" />,
       color: "bg-purple-100",
       iconColor: "text-purple-600"
     },
     {
-      title: "Discreet Delivery",
-      description: "Medication shipped from our licensed UK pharmacy",
+      title: "Discuss Your Plan",
+      description: "We'll recommend options based on your needs and qualifications",
       icon: <Truck className="w-8 h-8" />,
       color: "bg-emerald-100",
       iconColor: "text-emerald-600"
@@ -128,7 +128,7 @@ const HowItWorks = () => {
             <div>
               <h2 className="text-2xl font-bold text-gray-800 mb-4">Start Your Journey in Minutes</h2>
               <p className="text-gray-600 mb-6">
-                Our secure online consultation is quick, confidential, and reviewed by UK doctors. 
+                Our weightloss plans are customized,  confidential, and reviewed by UK doctors. 
                 Whether you're seeking weight loss help in Manchester or anywhere in the UK, we've made it easy.
               </p>
               
@@ -182,7 +182,7 @@ const HowItWorks = () => {
         >
           <Link href="/consultation">
             <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
-              Start Online Consultation
+              Book Your Appointment
             </button>
           </Link>
         </motion.div>

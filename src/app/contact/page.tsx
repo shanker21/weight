@@ -193,8 +193,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-semibold text-gray-800"> Pharmacy</h3>
-                                        <p className="text-gray-800">Timperley Late Night Pharmacy</p>
-                                        <p className="text-gray-600">22 Stockport Rd, Timperley, Altrincham WA15 7UT</p>
+                                        <p className="text-gray-800">Altrincham Travel Vaccination Centre</p>
+                                        <p className="text-gray-600">250 Stockport Rd, Timperley, Altrincham WA15 7UN, UK</p>
                                         <a
                                             href="https://g.co/kgs/w1kBoFk"
                                             target="_blank"
@@ -212,11 +212,11 @@ export default function ContactPage() {
                                         <ul className="text-gray-600 text-sm space-y-1">
                                             <li className="flex justify-between gap-4 ">
                                                 <span>Mon - Sat</span>
-                                                <span>9:00AM - 9:00PM</span>
+                                                <span>09:00AM - 09:00PM</span>
                                             </li>
                                             <li className="flex justify-between gap-4 max-w-xs">
                                                 <span>Sunday</span>
-                                                <span>10:00AM - 5:00PM</span>
+                                                <span>08:00AM - 06:00PM</span>
                                             </li>
                                             <li className="flex justify-center max-w-xs">
                                                 * timings may vary on public holidays
@@ -231,7 +231,7 @@ export default function ContactPage() {
                                 <Link
                                 href = "/consult">
                                 <button className="w-full inline-flex justify-center items-center px-6 py-3 text-base font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700 transition-colors duration-300 cursor-pointer">
-                                    Book Your Consultation
+                                    Book Your Appointment
                                 </button>
                                 </Link>
                             </div>
@@ -243,7 +243,7 @@ export default function ContactPage() {
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">Find Us</h3>
                     <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2276.7600694128223!2d-2.3208459235828687!3d53.39726277091289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bace46651c405%3A0x7486cd6f4b06735d!2sTimperley%20Late%20night%20Pharmacy%20%2CTravel%20Vaccination%20and%20Ear%20Wax%20removal%20Centre!5e1!3m2!1sen!2sin!4v1744707989881!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2069.216127384975!2d-2.320900523681208!3d53.39731517230414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487bad7f75f67c67%3A0x8b17ff8e094a3121!2sAltrincham%20Travel%20Vaccination%20Centre!5e1!3m2!1sen!2sin!4v1747663202025!5m2!1sen!2sin"
                             width="100%"
                             height="400"
                             style={{ border: 0 }}
