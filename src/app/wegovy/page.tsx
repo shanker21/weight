@@ -14,36 +14,36 @@ export default function WegovyPage() {
   const variants = [
     {
       dosage: '0.25mg',
-      price: 199.00,
-      weeklyPrice: 49.75,
+      price: 125.00,
+      weeklyPrice: 31.25,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '0.5mg',
-      price: 199.00,
-      weeklyPrice: 49.75,
+      price: 135.00,
+      weeklyPrice: 33.75,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '1mg',
-      price: 199.00,
-      weeklyPrice: 49.75,
+      price: 145.00,
+      weeklyPrice: 36.25,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
       dosage: '1.7mg',
-      price: 245.00,
-      weeklyPrice: 61.25,
+      price: 185.00,
+      weeklyPrice: 46.25,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
     {
-      dosage: '2.4mg',
-      price: 295.00,
-      weeklyPrice: 73.75,
+      dosage: '2.5mg',
+      price: 230.00,
+      weeklyPrice: 57.50,
       inStock: true,
       quantity: '1 x pre-filled pen (4 weekly doses)',
     },
@@ -350,7 +350,7 @@ export default function WegovyPage() {
                 <div className="mt-8 bg-blue-50 p-6 rounded-lg">
                   <h4 className="text-lg font-medium text-gray-800 mb-3">Dosing Schedule</h4>
                   <p className="text-gray-700">
-                    Wegovy treatment begins with a 4-week dose escalation period, starting at 0.25mg and stepping up the dose every 4 weeks before reaching the maintenance dose of 2.4mg weekly. This gradual increase helps minimize side effects.
+                    Wegovy treatment begins with a 4-week dose escalation period, starting at 0.25mg and stepping up the dose every 4 weeks before reaching the maintenance dose of 2.5mg weekly. This gradual increase helps minimize side effects.
                   </p>
                 </div>
               </div>

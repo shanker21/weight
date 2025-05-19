@@ -1,17 +1,17 @@
 
 ## Terms and Conditions
 
-### Last updated: 7th April 2025
+### Last updated: 17th May 2025
 
-These Terms and Conditions govern your use of the Altrincham Travel Clinic website and any services provided by us, including clinical consultations, vaccinations, and travel health advice. By accessing our site and/or booking an appointment, you agree to be bound by these terms.
+These Terms and Conditions govern your use of the WeightGone UK website and any services provided by us, including clinical consultations, vaccinations, and travel health advice. By accessing our site and/or booking an appointment, you agree to be bound by these terms.
 
-1. About Altrincham Travel Clinic
+1. About WeightGone UK
 
-Altrincham Travel Clinic is an independent private clinic providing travel health services, vaccinations, and related healthcare support to the public.
+WeightGone UK is an independent private clinic providing travel health services, vaccinations, and related healthcare support to the public.
 
-- Website: [https://altrinchamtravelclinic.co.uk](https://altrinchamtravelclinic.co.uk)
+- Website: [https://weightgone.co.uk](https://weightgone.co.uk)
 - Address: 250 Stockport Rd, Timperley, Altrincham, Greater Manchester, WA15 7UN.
-- Email: info@altrinchamtravelclinic.co.uk
+- Email: info@weightgone.co.uk
 - Phone: +441619485066
 
 2. Our Services
@@ -65,11 +65,11 @@ We do not guarantee that our website will always be available or free from error
 
 9. Intellectual Property
 
-All intellectual property on this website, including content, design, logos and graphics, is owned by or licensed to Altrincham Travel Clinic. You may not copy, reproduce, or distribute any content without our prior written consent.
+All intellectual property on this website, including content, design, logos and graphics, is owned by or licensed to WeightGone UK. You may not copy, reproduce, or distribute any content without our prior written consent.
 
 10. Data Protection and Privacy
 
-We are committed to protecting your personal data and privacy. Information you provide to us will be processed in accordance with UK data protection laws and our [Privacy Policy](https://altrinchamtravelclinic.co.uk/privacy-policy).
+We are committed to protecting your personal data and privacy. Information you provide to us will be processed in accordance with UK data protection laws and our [Privacy Policy](https://weightgone.co.uk/privacy-policy).
 
 11. Links to Other Websites
 

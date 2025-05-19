@@ -1,8 +1,8 @@
 ## Privacy Policy
 
-### Last updated: 7th April 2025
+### Last updated: 17th May 2025
 
-At Altrincham Travel Clinic, we are committed to safeguarding the privacy and security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your data when you use our website and services. 
+At WeightGone UK, we are committed to safeguarding the privacy and security of your personal information. This Privacy Policy explains how we collect, use, store, and protect your data when you use our website and services. 
 
 By accessing our website or using our services, you agree to the collection and use of your personal data in accordance with this Privacy Policy.
 
@@ -83,6 +83,6 @@ We may update this Privacy Policy from time to time to reflect changes in our pr
 
 If you have any questions or concerns about this Privacy Policy or how we handle your personal data, please contact us at:
 
-- Email: info@altrinchamtravelclinic.co.uk
+- Email: info@weightgone.co.uk
 - Phone: +441619485066
 - Address: 250 Stockport Rd, Timperley, Altrincham, Greater Manchester, WA15 7UN.
