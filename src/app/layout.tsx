@@ -30,13 +30,7 @@ export const metadata: Metadata = {
     description: "Safe and effective weight loss treatments",
     url: "https://www.weightgone.co.uk",
     siteName: "WeightGone UK",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
+    images: '/og-image.png',
     locale: "en_UK",
     type: "website",
   },
@@ -44,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WeightGone UK",
     description: "Safe and effective weight loss treatments",
-    images: ["/images/og-image.png"],
+    images: ['/og-image.png'],
   },
 };
 
@@ -55,9 +49,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      > <Header/>
+      <head>
+        {/* Fallback links */}
+        <link rel="shortcut icon" href="/icon.ico" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
+      </head>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Header/>
         {children}
         <FloatingWhatsApp />
         <Footer/>
