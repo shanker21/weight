@@ -5,6 +5,7 @@ import { ReactNode } from 'react';
 import { CheckCircle, Users, Shield, HeartPulse } from "lucide-react";
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
+import ChevronSteps from '@/components/ChevronSteps';
 
 interface ScrollAnimationProps {
   children: ReactNode;
@@ -45,71 +46,6 @@ export default function Home() {
       price: "£249/month",
       slug: "mounjaro",
     },
-  ];
-
-  const steps = [
-    {
-      title: "Face-to-Face Consultation",
-      description: (
-        <>
-          Meet with our clinicians to discuss your medical history, lifestyle, and
-          ensure it's safe for you to begin your weight loss journey. We'll:
-          <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
-            <li>Review your health background</li>
-            <li>Identify any underlying conditions</li>
-            <li>Assess suitability for treatment</li>
-          </ul>
-        </>
-      )
-    },
-    {
-      title: "Health Assessment",
-      description: (
-        <>
-          Comprehensive baseline measurements including:
-          <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
-            <li>Weight, BMI, and waist circumference</li>
-            <li>Blood pressure checks</li>
-            <li>Blood tests if required</li>
-          </ul>
-          <p className="mt-2 text-gray-600">
-            This helps us create a plan tailored specifically to your body.
-          </p>
-        </>
-      )
-    },
-    {
-      title: "Personalised Weight Loss Plan",
-      description: (
-        <>
-          We'll recommend options based on your needs:
-          <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
-            <li>Diet and lifestyle adjustments</li>
-            <li>Behavioural support strategies</li>
-            <li>Prescription medication if appropriate</li>
-          </ul>
-          <p className="mt-2 text-gray-600">
-            All recommendations follow NICE guidelines and clinical evidence.
-          </p>
-        </>
-      )
-    },
-    {
-      title: "Ongoing Monitoring & Support",
-      description: (
-        <>
-          Regular check-ins (in-clinic or virtual) to:
-          <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
-            <li>Track your progress</li>
-            <li>Adjust treatment as needed</li>
-            <li>Provide continuous support</li>
-          </ul>
-          <p className="mt-2 text-gray-600">
-            We're committed to your success every step of the way.
-          </p>
-        </>
-      )
-    }
   ];
 
   const testimonials = [
@@ -355,40 +291,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {steps.map((step, index) => (
-                <div
-                  key={index}
-                  className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-emerald-100 relative overflow-hidden"
-                >
-                  {/* Step indicator with subtle decoration */}
-                  <div className="absolute top-0 left-0 h-1 w-full bg-gradient-to-r from-emerald-400 to-emerald-600"></div>
-
-                  <div className="flex items-start mb-4">
-                    <div className="bg-emerald-600 text-white rounded-full h-12 w-12 flex items-center justify-center font-bold mr-4 text-lg flex-shrink-0">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-gray-800">
-                        {step.title}
-                      </h3>
-                      <div className="text-gray-600 mt-2 space-y-2">
-                        {step.description}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Subtle "step" divider - only visible on mobile */}
-                  {/* {index < steps.length - 1 && (
-          <div className="md:hidden flex justify-center pt-6">
-            <div className="h-6 w-px bg-gray-200 relative">
-              <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-2 h-2 rounded-full bg-emerald-500"></div>
-            </div>
-          </div>
-        )} */}
-                </div>
-              ))}
-            </div>
+            <ChevronSteps />
           </div>
         </div>
       </section>

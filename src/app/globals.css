@@ -25,6 +25,32 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+
+.clip-first-step {
+  clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%);
+}
+
+.clip-middle-step {
+  clip-path: polygon(0 0, 70% 0%, 100% 50%, 70% 100%, 0 100%, 30% 50%);
+}
+
+.clip-last-step {
+  clip-path: polygon(0 0, 70% 0, 100% 50%, 70% 100%, 0 100%, 30% 50%);
+}
+
+.active-step-left {
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%) !important;
+}
+
+.active-step-middle {
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%) !important;
+}
+
+.active-step-right {
+  clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%) !important;
+}
+
+
 @keyframes float {
 
   0%,
