@@ -19,9 +19,11 @@ export const metadata: Metadata = {
   title: "WeightGone UK | Safe Weight Loss Treatments",
   description: "Clinically proven weight loss treatments delivered across the UK. Book your appointment today.",
   icons: {
-    icon: "/images/logo.png",
-    shortcut: "/images/logo.png",
-    apple: "/images/logo.png",
+    icon: [
+      { url: '/icon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+      { url: '/apple-icon.png', type: 'image/png', sizes: '180x180' },
+    ],
   },
   openGraph: {
     title: "WeightGone UK",
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "WeightGone UK",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
       },

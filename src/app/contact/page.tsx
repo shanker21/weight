@@ -181,7 +181,7 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
                                         <a href="tel:+441612142345" className="text-emerald-600 hover:underline">
-                                            +44 161 214 2345
+                                            +44 161 948 5066
                                         </a>
                                         <p className="text-gray-600 mt-1">Mon-Fri: 9am-5pm</p>
                                     </div>
@@ -196,12 +196,12 @@ export default function ContactPage() {
                                         <p className="text-gray-800">Altrincham Travel Vaccination Centre</p>
                                         <p className="text-gray-600">250 Stockport Rd, Timperley, Altrincham WA15 7UN, UK</p>
                                         <a
-                                            href="https://g.co/kgs/w1kBoFk"
+                                            href="https://g.co/kgs/YR3woXm"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-emerald-600 hover:underline inline-block mt-2"
                                         >
-                                            View on Google Maps
+                                            View on Google
                                         </a>
                                     </div>
                                 </div>
