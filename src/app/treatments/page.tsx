@@ -116,49 +116,104 @@ export default function TreatmentsPage() {
           </div>
           <div className="py-12 px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl overflow-x-auto shadow-md rounded-lg">
-              <table className="min-w-full divide-y divide-gray-200" >
-                <caption className="caption-bottom text-gray-400">* Either BMI more than 30 or more than 27 with a cardiovascular disease </caption>
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th className="px-6 py-3 text-center text-xs font-bold text-gray-500 uppercase tracking-wider">Treatment</th>
-                    <th className="px-6 py-3 text-center text-xs font-bold text-emerald-700 uppercase tracking-wider bg-emerald-50">Mounjaro</th>
-                    <th className="px-6 py-3 text-center text-xs font-bold text-blue-700 uppercase tracking-wider bg-blue-50">Wegovy</th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ingredient</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">Tirzepatide</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">Semaglutide</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Expected weight loss</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">around 20%</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">around 15%</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Frequency</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">Once a Week</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">Once a Week</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Eligibility</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">BMI over 30 *</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">BMI over 30 *</td>
-                  </tr>
-                  <tr>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Prescription Only</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-emerald-50">Yes</td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-700 bg-blue-50">Yes</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="overflow-hidden rounded-xl border border-gray-200 shadow-md">
+  <table className="min-w-full divide-y divide-gray-200">
+    <caption className="sr-only">Comparison between Mounjaro and Wegovy treatments</caption>
+    <thead className="bg-gray-50">
+      <tr>
+        <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider bg-gray-100 rounded-tl-xl">
+          Treatment Details
+        </th>
+        <th className="px-6 py-4 text-center text-sm font-bold text-white uppercase tracking-wider bg-gradient-to-r from-emerald-600 to-emerald-500 relative">
+          <span className="relative z-10">Mounjaro</span>
+          
+        </th>
+        <th className="px-6 py-4 text-center text-sm font-bold text-white uppercase tracking-wider bg-gradient-to-r from-blue-400 to-blue-500 relative rounded-tr-xl">
+          Wegovy
+        </th>
+      </tr>
+    </thead>
+    <tbody className="bg-white divide-y divide-gray-200">
+      {[
+        { 
+          name: "Active Ingredient", 
+          mounjaro: "Tirzepatide", 
+          wegovy: "Semaglutide",
+          highlight: false
+        },
+        { 
+          name: "Expected Weight Loss", 
+          mounjaro: "Around 20% of body weight", 
+          wegovy: "Around 15% of body weight",
+          highlight: true
+        },
+        { 
+          name: "Dosing Frequency", 
+          mounjaro: "Once weekly injection", 
+          wegovy: "Once weekly injection",
+          highlight: false
+        },
+        { 
+          name: "Eligibility Criteria", 
+          mounjaro: "BMI ≥30 or ≥27 *", 
+          wegovy: "BMI ≥30 or ≥27 *",
+          highlight: false
+        },
+        { 
+          name: "Prescription Required", 
+          mounjaro: "Yes - In-person consultation", 
+          wegovy: "Yes - In-person consultation",
+          highlight: false
+        }
+      ].map((row, index) => (
+        <tr key={index} className={row.highlight ? "bg-gray-50" : ""}>
+          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
+            {row.name}
+          </td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-center font-medium text-gray-700 bg-emerald-50 border-r border-emerald-100">
+            {row.mounjaro}
+          </td>
+          <td className="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-700 bg-blue-50">
+            {row.wegovy}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colSpan={3} className="px-6 py-3 text-xs text-gray-500 bg-gray-50 rounded-b-xl">
+          * Either BMI more than 30 or more than 27 with a cardiovascular disease 
+         </td>
+      </tr>
+    </tfoot>
+  </table>
+  
+  {/* <div className="bg-white p-4 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <div className="text-sm text-gray-600">
+      <span className="font-medium">Note:</span> Individual results may vary based on health factors
+    </div>
+    <Link 
+      href="/how-it-works#eligibility" 
+      className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 text-white text-sm font-medium rounded-md shadow-sm hover:shadow-md transition-all"
+    >
+      Check Your Eligibility
+      <svg className="ml-2 w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+        <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
+      </svg>
+    </Link>
+  </div> */}
+</div>
             </div>
             <div className="text-center"> {/* Parent container to center children */}
-              <div className="inline-block mt-4 bg-yellow-100 text-yellow-900 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                <Link href="/how-it-works#eligibility">
-                  Check your Eligibility
-                </Link>
+              <div className="inline-block  px-4 py-2 rounded-full text-sm font-medium mt-12">
+                <Link href="/how-it-works#eligibility" className="w-full sm:w-auto">
+              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-black text-lg py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg cursor-pointer flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Check Your Eligibility
+              </button>
+            </Link>
               </div>
             </div>
           </div>

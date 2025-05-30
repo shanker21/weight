@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
 import { CheckCircle, Users, Shield, HeartPulse } from "lucide-react";
+import { FaShieldAlt, FaClinicMedical, FaUserMd, FaHeadset } from 'react-icons/fa';
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
 import ChevronSteps from '@/components/ChevronSteps';
@@ -31,6 +32,30 @@ const ScrollAnimation = ({ children, delay = 0 }: ScrollAnimationProps) => {
 
 
 export default function Home() {
+
+  const features = [
+    {
+      icon: <FaShieldAlt className="text-2xl" />,
+      title: "GPHC-registered prescribers",
+      description: "Our pharmacists are fully qualified and registered with the GPHC."
+    },
+    {
+      icon: <FaClinicMedical className="text-2xl" />,
+      title: "Licensed UK pharmacy",
+      description: "All medications are dispensed by a UK licensed pharmacy."
+    },
+    {
+      icon: <FaUserMd className="text-2xl" />,
+      title: "Face to Face Consultation",
+      description: "Guaranteed confidentiality and personalized care."
+    },
+    {
+      icon: <FaHeadset className="text-2xl" />,
+      title: "Ongoing clinical support",
+      description: "Our team is available to support you throughout your journey."
+    }
+  ];
+
   const treatments = [
     {
       name: "Wegovy (Semaglutide)",
@@ -71,7 +96,6 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white">
 
-      {/* Hero Section */}
 
       <ScrollAnimation delay={200}>
         <section className="bg-gradient-to-r from-emerald-50 to-blue-50 py-16 px-8 md:py-24 relative">
@@ -121,28 +145,30 @@ export default function Home() {
       </ScrollAnimation>
 
 
-      {/* Location CTA */}
       <ScrollAnimation delay={300}>
-        <section className="py-12 bg-white">
-          <div className="container mx-auto px-4 text-center max-w-4xl">
-            <div className="bg-emerald-50 p-6 rounded-xl shadow-sm border border-emerald-100">
-              <p className="text-xl md:text-2xl text-gray-700 font-medium">
-                Looking for weight loss in{" "}
-                <span className="text-emerald-600 font-semibold">Manchester</span>{" "}
-                {/* or weight loss in{" "}
-              <span className="text-emerald-600 font-semibold">London</span>*/}?
-                <p className=" text-emerald-700 font-bold mt-4">You're in the right place!</p>
+        <section className="py-8 bg-gradient-to-b to-gray-50 from-white">
+          <div className="container mx-auto px-4">
+            <div className="flex flex-col items-center">
+              <div className="inline-flex items-center bg-white px-6 py-3 rounded-full shadow-md border border-gray-100">
+                <svg className="w-10 h-10 mr-2 text-emerald-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                <span className="font-medium text-xl text-gray-700">
+                  Proudly serving <span className="text-emerald-600 font-semibold">Manchester</span> and surrounding areas
+                </span>
+              </div>
 
-              </p>
-              {/* <p className="text-lg text-gray-600 mt-4">
-              We serve Manchester with our weight loss clinic.
-            </p> */}
+              <div className="mt-6 text-center">
+                <p className="text-lg text-gray-600">
+                  Our Manchester clinic offers in-person consultations at{" "}
+                  <span className="font-medium text-emerald-800">250 Stockport Rd, Timperley, Altrincham WA15 7UN</span>
+                </p>
+              </div>
             </div>
           </div>
         </section>
       </ScrollAnimation>
 
-      {/* Why Choose Us */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -150,119 +176,79 @@ export default function Home() {
               Why Choose Us
             </span>
             <h2 className="text-3xl font-bold text-gray-900">
-              Why WeightGone.co.uk?
+              Why <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">WeightGone.co.uk</span>?
             </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+              Discover the difference of working with UK's trusted weight loss specialists
+            </p>
           </div>
+
           <ScrollAnimation delay={400}>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-emerald-100 p-3 rounded-full">
-                    <HeartPulse className="h-8 w-8 text-emerald-600" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="relative p-1 rounded-xl transition-all duration-300 hover:-translate-y-2 group"
+                >
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-200 to-blue-200 p-0.5 -z-10 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></div>
+
+                  <div className="backdrop-blur-sm bg-white/80 rounded-xl p-6 h-full shadow-sm group-hover:shadow-lg border border-gray-100 transition-all duration-300">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="bg-gradient-to-r from-emerald-50 to-blue-50 p-4 rounded-full mb-4 text-emerald-600 group-hover:animate-bounce shadow-inner">
+                        {feature.icon}
+                      </div>
+
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600">
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-center text-gray-800">
-                  GPHC-registered UK prescribers
-                </h3>
-                <p className="text-gray-600 text-center">
-                  Our pharmacists are fully qualified and registered with the GPHC.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-emerald-100 p-3 rounded-full">
-                    <Shield className="h-8 w-8 text-emerald-600" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-center text-gray-800">
-                  Licensed UK pharmacy
-                </h3>
-                <p className="text-gray-600 text-center">
-                  All medications are dispensed by a UK licensed pharmacy.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-emerald-100 p-3 rounded-full">
-                    <Users className="h-8 w-8 text-emerald-600" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-center text-gray-800">
-                  Face to Face Consultation
-                </h3>
-                <p className="text-gray-600 text-center">
-                  Guaranteed confidentiality and personalized care.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100 hover:border-emerald-100">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-emerald-100 p-3 rounded-full">
-                    <CheckCircle className="h-8 w-8 text-emerald-600" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold mb-2 text-center text-gray-800">
-                  Ongoing clinical support
-                </h3>
-                <p className="text-gray-600 text-center">
-                  Our team is available to support you throughout your journey.
-                </p>
-              </div>
+              ))}
             </div>
           </ScrollAnimation>
         </div>
       </section>
 
       {/* Popular Treatments */}
+
       <section className="py-14 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <Link
-              href="/treatments">
+          {/* <div className="text-center mb-12">
+            <Link href="/treatments">
               <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
                 Our Treatments
               </span>
             </Link>
-            <Link
-              href="/treatments">
+            <Link href="/treatments">
               <h2 className="text-3xl font-bold text-gray-900">
-                Popular Treatments
+                Weight Loss Treatments
               </h2>
             </Link>
+          </div> */}
+
+          <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto">
+            <Link href="/treatments" className="w-full sm:w-auto">
+              <button className="w-full bg-white border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-md flex items-center cursor-pointer animate-bounce justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 10.586V7z" clipRule="evenodd" />
+                </svg>
+                View All Treatments
+              </button>
+            </Link>
+
+            <Link href="/how-it-works#eligibility" className="w-full sm:w-auto">
+              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg animate-bounce cursor-pointer flex items-center justify-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                </svg>
+                Check Your Eligibility
+              </button>
+            </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {treatments.map((treatment, index) => (
-              <div
-                key={index}
-                className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all duration-300 hover:border-emerald-200 bg-white"
-              >
-                <div className="flex flex-col h-full">
-                  <h3 className="text-2xl font-bold text-emerald-600 mb-3">
-                    {treatment.name}
-                  </h3>
-                  <p className="text-gray-600 mb-4 flex-grow">
-                    {treatment.description}
-                  </p>
-                  <div className="mt-4">
-                    <p className="text-xl font-bold text-gray-800 mb-4">
-                      {treatment.price}
-                    </p>
-                    <Link href={`/${treatment.slug}`}>
-                      <button className="cursor-pointer w-full bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-200">
-                        Learn More
-                      </button>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
-          <div className="inline-block mt-4 bg-yellow-100 text-yellow-900 px-4 py-2 rounded-md text-sm font-medium mb-4">
-                <Link href="/how-it-works#eligibility">
-                  Check your Eligibility
-                </Link>
-              </div>
-              </div>
         </div>
       </section>
 
@@ -279,7 +265,6 @@ export default function Home() {
               <h2 className="text-3xl font-bold text-gray-900">How It Works</h2>
             </Link>
           </div>
-          {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-7xl mx-auto"> */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-800 mb-4">
@@ -318,8 +303,8 @@ export default function Home() {
                     <svg
                       key={i}
                       className={`w-5 h-5 ${i < testimonial.rating
-                          ? "text-yellow-400"
-                          : "text-gray-300"
+                        ? "text-yellow-400"
+                        : "text-gray-300"
                         }`}
                       fill="currentColor"
                       viewBox="0 0 20 20"

@@ -93,11 +93,11 @@ export default function BMICalculator() {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="bg-white p-6 rounded-xl shadow-md border border-gray-200 max-w-md mx-auto"
+      className="bg-white p-6 rounded-xl shadow-md border border-gray-200 max-w-lg mx-auto"
     >
       <h3 className="text-xl font-bold text-gray-800 mb-4">BMI Calculator</h3>
       
-      {/* Height Input */}
+      {/* Height  */}
       <div className="mb-2">
         <label className="block text-gray-700 mb-2">Height</label>
         <div className="flex gap-2">
@@ -124,7 +124,7 @@ export default function BMICalculator() {
         </div>
       </div>
 
-      {/* Weight Input */}
+      {/* Weight  */}
       <div className="mb-2">
         <label className="block text-gray-700 mb-2">Weight</label>
         <div className="flex gap-2">

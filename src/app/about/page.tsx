@@ -10,7 +10,7 @@ export default function AboutUs() {
     {
       icon: <FaShieldAlt className="text-3xl text-emerald-600" />,
       title: "Fully UK-based & regulated",
-      description: "Our clinic operates under strict NHS and CQC guidelines, ensuring the highest standards of care."
+      description: "Our clinic operates under the strict GPHC guidelines, ensuring highest standards of care."
     },
     {
       icon: <FaClinicMedical className="text-3xl text-emerald-600" />,
@@ -25,7 +25,7 @@ export default function AboutUs() {
     {
       icon: <FaUserMd className="text-3xl text-emerald-600" />,
       title: "Personalised medical support",
-      description: "Each patient receives a tailored plan from our GMC-registered doctors and nutrition specialists."
+      description: "Each patient receives a tailored plan from our GPHC registered pharmacists."
     },
     {
       icon: <FaThumbsUp className="text-3xl text-emerald-600" />,
@@ -35,14 +35,13 @@ export default function AboutUs() {
     {
       icon: <FaMapMarkerAlt className="text-3xl text-emerald-600" />,
       title: "Manchester specialists",
-      description: "While we serve all UK patients, we're particularly experienced with Manchester communities."
+      description: "Particularly experienced with Greater Manchester communities."
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 ">
       <div className="mx-auto">
-        {/* Hero Section */}
 
         <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -68,65 +67,7 @@ export default function AboutUs() {
           ))}
         </div>
 
-        {/* Story Section */}
-        {/* <div className="bg-white rounded-xl shadow-md overflow-hidden mb-16">
-          <div className="md:flex">
-            <div className="md:w-1/2 p-8 md:p-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Manchester Roots</h2>
-              <p className="text-gray-600 mb-4">
-                Founded in South Manchester by Dr. Sarah Wilkinson in 2018, WeightGone UK began as a local weight management clinic serving the Greater Manchester area.
-              </p>
-              <p className="text-gray-600 mb-4">
-                After witnessing the growing need for accessible, medically-supervised weight loss solutions, we expanded our services nationwide while maintaining our commitment to personalized care.
-              </p>
-              <p className="text-gray-600">
-                Today, we're proud to be Manchester's most trusted weight loss clinic while serving patients across the UK through our online platform.
-              </p>
-            </div>
-            <div className="md:w-1/2 bg-gray-100 min-h-[300px]">
-              
-              <div className="w-full h-full bg-[url('/images/manchester-clinic.jpg')] bg-cover bg-center"></div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* Team Section 
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Meet Our Medical Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="h-48 bg-[url('/images/doctor-1.jpg')] bg-cover bg-center"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">Dr. Sarah Wilkinson</h3>
-                <p className="text-blue-600 mb-3">Founder & Lead Physician</p>
-                <p className="text-gray-600">
-                  GMC-registered with 15 years experience in metabolic medicine and weight management.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="h-48 bg-[url('/images/nutritionist.jpg')] bg-cover bg-center"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">Emma Thompson</h3>
-                <p className="text-blue-600 mb-3">Head Nutritionist</p>
-                <p className="text-gray-600">
-                  Registered dietitian specializing in sustainable weight loss strategies.
-                </p>
-              </div>
-            </div>
-            <div className="bg-white rounded-xl shadow-md overflow-hidden">
-              <div className="h-48 bg-[url('/images/pharmacist.jpg')] bg-cover bg-center"></div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-1">James Wilson</h3>
-                <p className="text-blue-600 mb-3">Clinical Pharmacist</p>
-                <p className="text-gray-600">
-                  Expert in GLP-1 medications and medication safety protocols.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
+        
         {/* Testimonials */}
         <div className="bg-emerald-50 rounded-xl p-8 md:p-12 mb-16">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">What Our Patients Say</h2>
@@ -154,7 +95,7 @@ export default function AboutUs() {
           </div>
         </div>
 
-        {/* CTA Section */}
+        {/* CTA */}
         <div className="text-center pb-6">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Ready to Begin Your Journey?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">

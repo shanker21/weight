@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from "../../components/header";
+import Link from 'next/link';
 
 
 export default function MounjaroPage() {
@@ -143,7 +144,6 @@ export default function MounjaroPage() {
             <p className="text-lg text-gray-600 mb-4">by Eli Lilly</p>
 
             <div className="mb-6">
-              {/* <h3 className="text-lg font-medium text-gray-900 mb-2">Select Dosage:</h3> */}
               <div className="flex flex-wrap gap-2">
                 {variants.map((variant, index) => (
                   <button
@@ -171,11 +171,13 @@ export default function MounjaroPage() {
             </div>
 
             <div className="mb-8">
+              <Link href="/consult">
               <button
-                className={`w-full py-3 px-4 rounded-md font-medium text-white transition-all ${variants[selectedVariant].inStock ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-gray-400 cursor-not-allowed'}`}
+                className={`w-full cursor-pointer py-3 px-4 rounded-md font-medium text-white transition-all ${variants[selectedVariant].inStock ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-gray-400 cursor-not-allowed'}`}
               >
                 Start Journey
               </button>
+              </Link>
             </div>
 
             <div className="border-t border-gray-200 pt-4 mb-6">

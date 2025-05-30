@@ -1,4 +1,4 @@
-"use client"; // Required for Next.js if using app router
+"use client";
 
 import { useState } from 'react';
 
@@ -71,51 +71,47 @@ const ChevronSteps = () => {
     ];
 
     return (
-        <div className="relative w-full px-2 py-6">
-            {/* Mobile view remains the same */}
+         <div className="relative w-full px-2 py-6">
             <div className="md:hidden flex justify-center mb-6 space-x-3">
                 {steps.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setActiveStep(index)}
                         className={`h-3 w-3 rounded-full transition-all ${index === activeStep ? 'bg-emerald-600 scale-125' : 'bg-gray-300'}`}
-                        aria-label={`Go to step ${index + 1}`}
                     />
                 ))}
             </div>
 
-            {/* Desktop view - full width continuous chevron */}
-            <div className="hidden md:flex items-stretch h-[380px] w-full ">
+        
+            <div className="hidden md:flex items-stretch h-[380px] w-full">
                 {steps.map((step, index) => (
                     <div
                         key={index}
-                        className={`relative  transition-all duration-300  ${index === activeStep
-                                ? `z-10 flex-[2.5] mx-[-15px] ${index === 0
-                                    ? 'active-step-left'
-                                    : index === steps.length - 1
-                                        ? 'active-step-right'
-                                        : 'active-step-middle'
-                                }`
-                                : 'z-0 flex-1'
+                        className={`relative transition-all duration-300 ${index === activeStep
+                            ? `z-10 flex-[2.5] mx-[-15px] ${index === 0
+                                ? 'active-step-left'
+                                : index === steps.length - 1
+                                    ? 'active-step-right'
+                                    : 'active-step-middle'
+                            }`
+                            : 'z-0 flex-1'
                             }`}
                     >
                         <button
-                            onClick={() => setActiveStep(index)} // Add this onClick handler
+                            onClick={() => setActiveStep(index)}
                             className={`h-full w-full flex items-center transition-all duration-300 ${index === activeStep
-                                    ? 'bg-emerald-50 shadow-lg px-6 py-4'
-                                    : index < activeStep
-                                        ? 'bg-emerald-500 hover:bg-emerald-600 px-1 cursor-pointer'
-                                        : 'bg-emerald-500 hover:bg-emerald-600 px-1 cursor-pointer'
-                                } ${index === 0
-                                    ? index === activeStep ? '' : 'clip-first-step'
-                                    : index === steps.length - 1
-                                        ? index === activeStep ? '' : 'clip-last-step'
-                                        : index === activeStep ? '' : 'clip-middle-step'
-                                }`}
+                                ? 'bg-emerald-100 shadow-lg px-6 py-4'
+                                : 'bg-emerald-500 cursor-pointer animate-[ping-mini_1s_infinite] hover:bg-emerald-600 px-1 group'
+                            } ${index === 0
+                                ? index === activeStep ? '' : 'clip-first-step'
+                                : index === steps.length - 1
+                                    ? index === activeStep ? '' : 'clip-last-step'
+                                    : index === activeStep ? '' : 'clip-middle-step'
+                            }`}
                         >
                             {index === activeStep ? (
-                                <div className="text-left overflow-hidden w-full h-full overflow-y-auto mr-4 pl-4">
-                                    <div className="flex items-center mb-3">
+                                <div className="text-left w-full h-full overflow-y-auto mr-4 pl-4">
+                                     <div className="flex items-center mb-3">
                                         <div className="bg-emerald-600 text-white rounded-full h-10 w-10 flex items-center justify-center font-bold mr-3 text-lg flex-shrink-0">
                                             {index + 1}
                                         </div>
@@ -128,10 +124,15 @@ const ChevronSteps = () => {
                                     </div>
                                 </div>
                             ) : (
-                                <div className="flex flex-col items-center justify-center h-full w-full">
-                                    <span className="bg-white text-emerald-600 rounded-full h-12 w-12 flex items-center justify-center font-bold mr-0 text-2xl flex-shrink-0 ml-4">
-                                            {index + 1}
-                                        </span>
+                                <div className="flex flex-col items-center justify-center h-full w-full relative">
+                                 
+                                    <div className="absolute inset-0 flex items-center justify-center">
+                                        <span className="absolute h-16 w-16 rounded-full bg-white/30 "></span>
+                                    </div>
+                                    
+                                    <span className="bg-white text-emerald-600 rounded-full h-12 w-12 flex items-center justify-center font-bold text-2xl z-10 group-hover:scale-110 transition-transform">
+                                        {index + 1}
+                                    </span>
                                 </div>
                             )}
                         </button>
@@ -141,7 +142,6 @@ const ChevronSteps = () => {
 
 
 
-            {/* Mobile content (simple cards) */}
             <div className="md:hidden space-y-6">
                 <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
                     <div className="flex items-start mb-4">

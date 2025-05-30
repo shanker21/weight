@@ -18,7 +18,6 @@ export default function MarkdownContent({ content }: MarkdownContentProps) {
     ">
       <ReactMarkdown
         components={{
-          // Override components with hardcoded colors
           h1: ({ node, ...props }) => (
             <h1 className="text-4xl font-bold mb-6 text-[#2E86AB]" {...props} />
           ),
