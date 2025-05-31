@@ -1,4 +1,3 @@
-// app/contact/page.tsx
 'use client';
 
 import { useState } from 'react';
@@ -54,7 +53,7 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-gray-50">
             <div className="mx-auto">
-                {/* Page Header */}
+                {/*  Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -226,7 +225,6 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* CTA Button at absolute bottom */}
                             <div className="mt-auto pt-6 text-center">
                                 <Link
                                 href = "/consult">
@@ -238,7 +236,7 @@ export default function ContactPage() {
                         </div>
                     </motion.div>
                 </div>
-                {/* Google Maps Embed */}
+                {/* Google Maps */}
                 <div className="bg-white mx-2 p-4 mt-6 lg:mx-6 rounded-xl shadow-md border border-gray-200">
                     <h3 className="text-xl font-semibold text-gray-800 mb-4">Find Us</h3>
                     <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">

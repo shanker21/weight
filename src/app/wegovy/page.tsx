@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from "../../components/header";
+import Link from 'next/link';
 
 
 export default function WegovyPage() {
@@ -116,7 +117,6 @@ export default function WegovyPage() {
               />
             </div>
 
-            {/* Thumbnail Carousel */}
             <div className="flex gap-2 overflow-x-auto py-2">
               {images.map((image, index) => (
                 <button
@@ -136,14 +136,12 @@ export default function WegovyPage() {
             </div>
           </div>
 
-          {/* Right Column - Product Info */}
           <div className="md:w-1/2">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Wegovy (Semaglutide)</h1>
             <p className="text-lg text-gray-600 mb-4">by Novo Nordisk</p>
 
             {/* Variant Selection */}
             <div className="mb-6">
-              {/* <h3 className="text-lg font-medium text-gray-900 mb-2">Select Dosage:</h3> */}
               <div className="flex flex-wrap gap-2">
                 {variants.map((variant, index) => (
                   <button
@@ -171,13 +169,14 @@ export default function WegovyPage() {
               <p className="text-sm text-gray-500 mt-1">Eligible for BMI of 30 kg/m2 or more</p>
             </div>
 
-            {/* Add to Cart */}
             <div className="mb-8">
+              <Link href="/consult">
               <button
-                className={`w-full py-3 px-4 rounded-md font-medium text-white transition-all ${variants[selectedVariant].inStock ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-gray-400 cursor-not-allowed'}`}
+                className={`w-full py-3 px-4 cursor-pointer rounded-md font-medium text-white transition-all ${variants[selectedVariant].inStock ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-gray-400 cursor-not-allowed'}`}
               >
                 Start Journey
               </button>
+              </Link>
             </div>
 
             {/* Features */}
@@ -213,7 +212,7 @@ export default function WegovyPage() {
           </div>
         </div>
 
-        {/* Description Section */}
+        {/* Description  */}
         <div className="mt-12 bg-white p-6 rounded-lg shadow-sm">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">What is Wegovy?</h2>
           <div className="prose max-w-none text-gray-700">
