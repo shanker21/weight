@@ -36,17 +36,42 @@ export default function TreatmentsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-50 to-blue-50 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Weight Loss Treatments
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our prescription treatments are clinically proven to help you
-            achieve sustainable weight loss.
-          </p>
+<section className="relative bg-white overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-teal-50 transform skew-y-3 origin-top-left"></div>
+  
+  <div className="relative z-10 py-24 px-4 sm:px-6 lg:px-8">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div>
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">
+            Clinically Proven
+          </span> Weight Loss Solutions
+        </h1>
+        <p className="text-xl text-gray-700 mb-8">
+          FDA-approved medications combined with personalized medical support for sustainable results
+        </p>
+        <div className="flex flex-wrap gap-4">
+          {['Wegovy', 'Mounjaro', 'Orlistat'].map((treatment, i) => (
+            <span key={i} className="bg-white px-4 py-2 rounded-full shadow-md border border-gray-200 font-medium">
+              {treatment}
+            </span>
+          ))}
         </div>
-      </section>
+      </div>
+      
+      <div className="relative">
+        <div className="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-2"></div>
+        <Image 
+          src="/images/treatments-showcase.jpg" 
+          alt="Weight loss treatments"
+          width={600}
+          height={400}
+          className="relative rounded-xl shadow-xl"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">

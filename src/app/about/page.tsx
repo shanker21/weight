@@ -20,7 +20,7 @@ export default function AboutUs() {
     {
       icon: <FaPoundSign className="text-3xl text-emerald-600" />,
       title: "Transparent pricing",
-      description: "No hidden fees - our all-inclusive packages cover consultations, medications, and ongoing support."
+      description: "No hidden fees – our all-inclusive packages cover consultations, medications, and ongoing support."
     },
     {
       icon: <FaUserMd className="text-3xl text-emerald-600" />,
@@ -43,28 +43,53 @@ export default function AboutUs() {
     <div className="min-h-screen bg-gray-50 ">
       <div className="mx-auto">
 
-        <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-50 to-blue-50 py-20"
-                >
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Why Choose WeightGone UK?</h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                       Transforming lives through medically-supervised weight loss programs tailored to your unique needs.
-                    </p>
-                </motion.div>
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  className="relative py-24 bg-[url('/images/hero-bg-texture.png')] bg-cover bg-center"
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-cyan-700/30 to-gray-50/100"></div>
+  
+  <div className="relative z-10 px-4  sm:px-6 lg:p-8  text-center">
+    <div className="max-w-4xl mx-auto">
+      
+      
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
+        Why <span className="text-green-700">WeightGone UK</span> Stands Out
+      </h1>
+      
+      
+      
+      
+    </div>
+  </div>
+</motion.div>
 
         {/* Features Grid */}
-        <div className="py-12 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="bg-gradient-to-b from-gray-50 to-white py-2 px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 ">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
-              <div className="flex flex-col items-center text-center">
-                <div className="mb-4">{feature.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-              </div>
-            </div>
-          ))}
+                <div
+                  key={index}
+                  className="relative p-1 rounded-xl transition-all duration-300 hover:-translate-y-2 group"
+                >
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-200 to-blue-200 p-0.5 -z-10  opacity-100 transition-opacity duration-300"></div>
+
+                  <div className="backdrop-blur-sm bg-white/10 rounded-xl p-6 h-full shadow-lg group-hover:shadow-2xl border border-gray-300 transition-all duration-300">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="bg-gradient-to-r from-emerald-50 to-blue-50 p-4 rounded-full mb-4 text-emerald-600 group-hover:animate-bounce shadow-inner">
+                        {feature.icon}
+                      </div>
+
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                        {feature.title}
+                      </h3>
+                      <p className="text-gray-600">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
         </div>
 
         

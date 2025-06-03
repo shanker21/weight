@@ -54,18 +54,31 @@ export default function ContactPage() {
         <div className="min-h-screen bg-gray-50">
             <div className="mx-auto">
                 {/*  Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-center mb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-emerald-50 to-blue-50 py-20"
-                >
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Get in touch with our team for any questions about our weight loss treatments
-                    </p>
-                </motion.div>
+<motion.div 
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  className="relative overflow-hidden bg-gradient-to-b from-cyan-700/30 to-gray-50 py-24 text-center"
+>
+  {/* Floating circles */}
+  <div className="absolute top-20 left-1/4 w-32 h-32 rounded-full bg-white/40 mix-blend-overlay"></div>
+  <div className="absolute bottom-10 right-1/3 w-40 h-40 rounded-full bg-white/40 mix-blend-overlay"></div>
+  
+  <div className="relative z-10 px-4 sm:px-6 lg:p-8">
+    <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">
+      Let's Start Your <span className="text-emerald-700">Weight Loss Journey</span> Together
+    </h1>
+    <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+      Our specialists are ready to guide you - ask us anything about treatments, pricing, or getting started
+    </p>
+    
+    
+  </div>
+  
+  {/* Wave divider */}
+  <div className="absolute bottom-0 left-0 right-0 h-12 bg-[url('/images/wave-divider.svg')] bg-cover"></div>
+</motion.div>
 
-                <div className="grid grid-cols-1 mx-2 lg:grid-cols-2 gap-12 lg:mx-6">
+                <div className="grid grid-cols-1 mx-2 bg-gray-50 lg:grid-cols-2 gap-12 lg:mx-6">
                     {/* Contact Form */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}

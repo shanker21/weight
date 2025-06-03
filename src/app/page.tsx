@@ -94,26 +94,26 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-emerald-100">
 
 
-      <ScrollAnimation delay={200}>
-        <section className="bg-gradient-to-r from-emerald-50 to-blue-50 py-16 px-8 md:py-24 relative">
+      <ScrollAnimation delay={50}>
+        <section className="bg-gradient-to-b from-gray-100 to-teal-150 py-16 px-8 md:py-24 relative">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2 z-10">
-                <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Achieve Your Weight Loss Goals{" "}
+                <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                  Achieve Your <br /><span className="text-teal-950">WEIGHTLOSS GOALS</span><br />
                   <span className="text-emerald-600">Safely</span> and{" "}
                   <span className="text-emerald-600">Effectively</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8">
-                  Clinically approved treatments delivered discreetly across the UK
+                  Explore clinically approved weightloss treatments at WeightGone
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/consultation">
-                    <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
+                    <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 border-emerald-600 border-2 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
                       Book My Appointment
                     </button>
                   </Link>
@@ -136,7 +136,7 @@ export default function Home() {
                 />
               </div>
               <div className="absolute top-0 right-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute -top-40 -right-100 w-[100%] h-[120%] bg-gradient-to-tl from-green-800/60 to-transparent rounded-[50%] transform rotate-[180deg]  z-0 hidden md:block animate-float-gradient overflow-clip">
+                <div className="absolute -top-40 -right-100 w-[100%] h-[120%] bg-gradient-to-tl from-green-800/60 to-transparent rounded-[50%] transform rotate-[180deg]  z-0 hidden md:block animate-float-gradient overflow-clip ">
                 </div>
               </div>
             </div>
@@ -145,8 +145,8 @@ export default function Home() {
       </ScrollAnimation>
 
 
-      <ScrollAnimation delay={300}>
-        <section className="py-8 bg-gradient-to-b to-gray-50 from-white">
+      <ScrollAnimation delay={100}>
+        <section className="pt-4 pb-2 bg-gradient-to-b from-teal-150 to-teal-50">
           <div className="container mx-auto px-4">
             <div className="flex flex-col items-center">
               <div className="inline-flex items-center bg-white px-6 py-3 rounded-full shadow-md border border-gray-100">
@@ -160,7 +160,7 @@ export default function Home() {
 
               <div className="mt-6 text-center">
                 <p className="text-lg text-gray-600">
-                  Our Manchester clinic offers in-person consultations at{" "}
+                   Book in-person consultations at our Manchester clinic @{" "}
                   <span className="font-medium text-emerald-800">250 Stockport Rd, Timperley, Altrincham WA15 7UN</span>
                 </p>
               </div>
@@ -169,7 +169,7 @@ export default function Home() {
         </section>
       </ScrollAnimation>
 
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
+      <section className="pb-16 pt-12 bg-gradient-to-b from-teal-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -183,16 +183,16 @@ export default function Home() {
             </p>
           </div>
 
-          <ScrollAnimation delay={400}>
+          <ScrollAnimation delay={200}>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
                   className="relative p-1 rounded-xl transition-all duration-300 hover:-translate-y-2 group"
                 >
-                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-200 to-blue-200 p-0.5 -z-10 group-hover:opacity-100 opacity-0 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-emerald-200 to-blue-200 p-0.5 -z-10  opacity-100 transition-opacity duration-300"></div>
 
-                  <div className="backdrop-blur-sm bg-white/80 rounded-xl p-6 h-full shadow-sm group-hover:shadow-lg border border-gray-100 transition-all duration-300">
+                  <div className="backdrop-blur-sm bg-white/50 rounded-xl p-6 h-full shadow-sm group-hover:shadow-2xl border border-gray-100 transition-all duration-300">
                     <div className="flex flex-col items-center text-center">
                       <div className="bg-gradient-to-r from-emerald-50 to-blue-50 p-4 rounded-full mb-4 text-emerald-600 group-hover:animate-bounce shadow-inner">
                         {feature.icon}
