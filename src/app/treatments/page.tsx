@@ -1,6 +1,9 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
+import { motion } from 'framer-motion';
+
 
 export default function TreatmentsPage() {
   const treatments = [
@@ -34,29 +37,33 @@ export default function TreatmentsPage() {
     },
   ];
 
+
+
   return (
     <div className="min-h-screen bg-white">
-      <section className="bg-gradient-to-r from-emerald-50 to-blue-50 py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Weight Loss Treatments
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Our prescription treatments are clinically proven to help you
-            achieve sustainable weight loss.
-          </p>
-        </div>
-      </section>
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  className="relative py-20 bg-[url('/images/treatments.jpg')] bg-cover bg-center"
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-cyan-700/30 to-gray-50/100"></div>
+  
+        <div className="relative z-10 px-4  sm:px-6 lg:p-8  text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <span className="text-emerald-700">
+            Clinically Proven
+          </span> Weight Loss Solutions
+        </h1>
+        <p className="text-xl text-gray-700 mb-2">
+          FDA-approved medications combined with personalized medical support for sustainable results
+        </p>
 
-      <section className="py-16 bg-white">
+      </div>
+</motion.div>
+
+      <section className="py-6 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-lg text-gray-600 mb-6">
-              Browse through our result driven weightloss treatments
-            </p>
-            <div className="w-20 h-1 bg-emerald-500 mx-auto"></div>
-          </div>
-
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {treatments.map((treatment, index) => (
               <div
