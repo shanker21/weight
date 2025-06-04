@@ -50,17 +50,17 @@ export default function AboutUs() {
 >
   <div className="absolute inset-0 bg-gradient-to-b from-cyan-700/30 to-gray-50/100"></div>
   
-  <div className="relative z-10 px-4  sm:px-6 lg:p-8  text-center">
+  <div className="relative z-10 px-4  sm:px-6 lg:p-6  text-center">
     <div className="max-w-4xl mx-auto">
       
-      
-      <h1 className="text-4xl md:text-5xl font-bold text-gray-700 mb-6 leading-tight">
-        Why <span className="text-green-700">WeightGone UK</span> Stands Out
+      <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+        Why <span className="text-emerald-700">WeightGone UK</span> Stands Out
       </h1>
-      
-      
-      
-      
+      <p className="text-xl text-gray-800 mb-2">
+        Specializing in personalized, face-to-face care at our Timperly clinic. 
+        Our medical team combines cutting-edge treatments with compassionate support.
+      </p>
+
     </div>
   </div>
 </motion.div>
