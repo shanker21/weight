@@ -1,6 +1,9 @@
+"use client";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
+import { motion } from 'framer-motion';
+
 
 export default function TreatmentsPage() {
   const treatments = [
@@ -34,54 +37,33 @@ export default function TreatmentsPage() {
     },
   ];
 
+
+
   return (
     <div className="min-h-screen bg-white">
-<section className="relative bg-white overflow-hidden">
-  <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-teal-50 transform skew-y-3 origin-top-left"></div>
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  className="relative py-20 bg-[url('/images/treatments.jpg')] bg-cover bg-center"
+>
+  <div className="absolute inset-0 bg-gradient-to-b from-cyan-700/30 to-gray-50/100"></div>
   
-  <div className="relative z-10 py-24 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">
+        <div className="relative z-10 px-4  sm:px-6 lg:p-8  text-center">
+        <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          <span className="text-emerald-700">
             Clinically Proven
           </span> Weight Loss Solutions
         </h1>
-        <p className="text-xl text-gray-700 mb-8">
+        <p className="text-xl text-gray-700 mb-2">
           FDA-approved medications combined with personalized medical support for sustainable results
         </p>
-        <div className="flex flex-wrap gap-4">
-          {['Wegovy', 'Mounjaro', 'Orlistat'].map((treatment, i) => (
-            <span key={i} className="bg-white px-4 py-2 rounded-full shadow-md border border-gray-200 font-medium">
-              {treatment}
-            </span>
-          ))}
-        </div>
-      </div>
-      
-      <div className="relative">
-        <div className="absolute -inset-4 bg-blue-100 rounded-2xl transform rotate-2"></div>
-        <Image 
-          src="/images/treatments-showcase.jpg" 
-          alt="Weight loss treatments"
-          width={600}
-          height={400}
-          className="relative rounded-xl shadow-xl"
-        />
-      </div>
-    </div>
-  </div>
-</section>
 
-      <section className="py-16 bg-white">
+      </div>
+</motion.div>
+
+      <section className="py-6 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <p className="text-lg text-gray-600 mb-6">
-              Browse through our result driven weightloss treatments
-            </p>
-            <div className="w-20 h-1 bg-emerald-500 mx-auto"></div>
-          </div>
-
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-6xl mx-auto">
             {treatments.map((treatment, index) => (
               <div

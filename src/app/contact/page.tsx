@@ -63,7 +63,7 @@ export default function ContactPage() {
   <div className="absolute top-20 left-1/4 w-32 h-32 rounded-full bg-white/40 mix-blend-overlay"></div>
   <div className="absolute bottom-10 right-1/3 w-40 h-40 rounded-full bg-white/40 mix-blend-overlay"></div>
   
-  <div className="relative z-10 px-4 sm:px-6 lg:p-8">
+  <div className="relative z-10 px-4 sm:px-6 lg:p-6">
     <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">
       Let's Start Your <span className="text-emerald-700">Weight Loss Journey</span> Together
     </h1>
@@ -75,7 +75,7 @@ export default function ContactPage() {
   </div>
   
   {/* Wave divider */}
-  <div className="absolute bottom-0 left-0 right-0 h-12 bg-[url('/images/wave-divider.svg')] bg-cover"></div>
+  {/* <div className="absolute bottom-0 left-0 right-0 h-12 bg-[url('/images/wave-divider.svg')] bg-cover"></div> */}
 </motion.div>
 
                 <div className="grid grid-cols-1 mx-2 bg-gray-50 lg:grid-cols-2 gap-12 lg:mx-6">
