@@ -166,8 +166,9 @@ export default function WegovyPage() {
                   £{variants[selectedVariant].weeklyPrice.toFixed(2)} per week
                 </span>
               </div>
-              <p className="text-sm text-gray-500 mt-1">Eligible for BMI of 30 kg/m2 or more</p>
-            </div>
+              <p className="text-md text-gray-500 mt-1">Eligible for BMI of 27* or 30 kg/m²
+              <span className="text-md underline text-blue-500 ml-2"><Link href="/how-it-works#eligibility">*Check Eligibility </Link></span></p>
+              </div>
 
             <div className="mb-8">
               <Link href="/consult">

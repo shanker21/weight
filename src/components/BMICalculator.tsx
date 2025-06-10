@@ -105,7 +105,7 @@ export default function BMICalculator() {
             type="number"
             value={height}
             onChange={(e) => setHeight(parseFloat(e.target.value) || 0)}
-            className="flex-1 p-1 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="flex-1 p-1 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 md:max-w-[80%] max-w-[55%]"
           />
           <div className="flex border border-gray-300 rounded-lg overflow-hidden">
             <button
@@ -132,7 +132,7 @@ export default function BMICalculator() {
             type="number"
             value={weight}
             onChange={(e) => setWeight(parseFloat(e.target.value) || 0)}
-            className="flex-1 p-3 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+            className="flex-1 p-1 border text-gray-800 border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 md:max-w-[80%] max-w-[55%]"
           />
           <div className="flex border border-gray-300 rounded-lg overflow-hidden">
             <button
@@ -189,12 +189,27 @@ export default function BMICalculator() {
       )}
 
       {/* Eligibility Info */}
-      <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-        <p className="text-sm text-blue-800">
-          To be eligible for our weight loss treatments, you typically need a BMI of <b>30 or more</b>, 
-          or 27+ with weight-related conditions like type 2 diabetes.
-        </p>
-      </div>
+<div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+  <p className="text-sm text-blue-800 mb-2">
+    To be eligible for our weight loss treatments, you typically need:
+  </p>
+  <p className="text-sm text-blue-800 list-disc list-inside space-y-1">
+
+    <b>BMI ≥27</b> or greater in the presence of least one weight-related condition:
+</p>
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mt-2 ml-4">
+    <ul className="text-sm text-blue-800 list-disc list-inside space-y-1">
+      <li>Hypertension</li>
+      <li>Dyslipidaemia</li>
+      <li>Obstructive sleep apnoea</li>
+    </ul>
+    <ul className="text-sm text-blue-800 list-disc list-inside space-y-1">
+      <li>Cardiovascular disease</li>
+      <li>Prediabetes</li>
+      <li>Type 2 diabetes</li>
+    </ul>
+  </div>
+</div>
     </motion.div>
   );
 }

@@ -8,7 +8,7 @@ export default function Footer() {
         <div>
           <h3 className="text-xl font-bold mb-4 text-white">WeightGone</h3>
           <p className="text-gray-400">
-            Clinically approved weight loss treatments delivered across the
+            Clinically approved weight loss treatments in Manchester.
             UK.
           </p>
         </div>

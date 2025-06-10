@@ -1,9 +1,25 @@
 "use client";
 
 import { useState } from 'react';
+import { useSwipeable } from 'react-swipeable';
 
 const ChevronSteps = () => {
     const [activeStep, setActiveStep] = useState(0);
+
+     const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      if (activeStep < steps.length - 1) {
+        setActiveStep((prev) => prev + 1);
+      }
+    },
+    onSwipedRight: () => {
+      if (activeStep > 0) {
+        setActiveStep((prev) => prev - 1);
+      }
+    },
+    trackMouse: true, // enables dragging on desktop too
+  });
+
 
     const steps = [
         {
@@ -72,7 +88,7 @@ const ChevronSteps = () => {
 
     return (
          <div className="relative w-full px-2 py-6">
-            <div className="md:hidden flex justify-center mb-6 space-x-3">
+            {/* <div className="md:hidden flex justify-center mb-6 space-x-3">
                 {steps.map((_, index) => (
                     <button
                         key={index}
@@ -80,7 +96,7 @@ const ChevronSteps = () => {
                         className={`h-3 w-3 rounded-full transition-all ${index === activeStep ? 'bg-emerald-600 scale-125' : 'bg-gray-300'}`}
                     />
                 ))}
-            </div>
+            </div> */}
 
         
             <div className="hidden md:flex items-stretch h-[380px] w-full">
@@ -142,23 +158,39 @@ const ChevronSteps = () => {
 
 
 
-            <div className="md:hidden space-y-6">
-                <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
-                    <div className="flex items-start mb-4">
-                        <div className="bg-emerald-600 text-white rounded-full h-12 w-12 flex items-center justify-center font-bold mr-4 text-lg flex-shrink-0">
-                            {activeStep + 1}
-                        </div>
-                        <div>
-                            <h3 className="text-xl font-semibold text-gray-800">
-                                {steps[activeStep].title}
-                            </h3>
-                            <div className="text-gray-600 mt-2 space-y-2">
-                                {steps[activeStep].description}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div className="md:hidden space-y-4">
+      <div
+        {...swipeHandlers}
+        className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transition-all duration-300"
+      >
+        <div className="flex items-start mb-4">
+          <div className="bg-emerald-600 text-white rounded-full h-12 w-12 flex items-center justify-center font-bold mr-4 text-lg flex-shrink-0">
+            {activeStep + 1}
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-gray-800">
+              {steps[activeStep].title}
+            </h3>
+            <div className="text-gray-600 mt-2 space-y-2">
+              {steps[activeStep].description}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Step Dots moved to bottom */}
+      <div className="flex justify-center gap-2 mt-4">
+        {steps.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveStep(index)}
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
+              index === activeStep ? 'bg-emerald-600 scale-125' : 'bg-gray-300'
+            }`}
+          ></button>
+        ))}
+      </div>
+    </div>
         </div>
     );
 };
