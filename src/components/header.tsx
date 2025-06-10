@@ -17,11 +17,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-3">
+    <header className="bg-emerald-900 shadow-sm sticky top-0 z-50">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-10">
-            <Link href="/" className="flex items-center text-2xl font-bold text-emerald-600">
+          <div className="flex items-center gap-16">
+            <Link href="/" className="flex items-center text-2xl font-bold text-white">
               <Image 
                 src="/images/logo.png"
                 alt="logo"
@@ -32,12 +32,12 @@ export default function Header() {
               WeightGone
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-8 ">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-emerald-600 transition-colors font-medium whitespace-nowrap"
+                  className="text-white hover:text-gray-50 transition-colors hover:-translate-y-1 font-bold whitespace-nowrap"
                 >
                   {item.name}
                 </Link>
@@ -48,13 +48,13 @@ export default function Header() {
           <div className="flex items-center gap-4">
             <Link 
               href="/consultation" 
-              className="hidden md:inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-200 whitespace-nowrap"
+              className="hidden md:inline-block hover:bg-emerald-600 hover:text-white bg-white text-emerald-900 font-bold py-3 px-4 rounded-lg transition-all duration-300 hover:shadow-emerald-900 whitespace-nowrap hover:-translate-y-1 shadow-md"
             >
-              Book an Appointment
+              Book Appointment
             </Link>
 
             <button
-              className="lg:hidden text-gray-700"
+              className="lg:hidden text-white"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -70,7 +70,7 @@ export default function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block py-2 text-gray-700 hover:text-emerald-600 transition-colors font-medium"
+                  className="block text-center py-2 text-white hover:text-emerald-600 transition-colors font-medium"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
@@ -81,7 +81,7 @@ export default function Header() {
                 className="block w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Consult Now
+                Book Appointment
               </Link>
             </nav>
           )}

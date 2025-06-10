@@ -38,7 +38,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-tl from-emerald-100 me to-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <motion.div
@@ -149,7 +149,7 @@ const HowItWorks = () => {
                   <ul className="space-y-3 text-gray-700">
                     {[
                       "Aged 18–75 years",
-                      "BMI 30+ (or 27+ with weight-related conditions like hypertension or diabetes)",
+                      "BMI 30+ (or 27+ with weight-related comorbidity such as Hypertension, Dyslipidaemia, Prediabetes or Cardiovascular diseases)",
                       "No contraindications to weight loss medications"
                     ].map((item, index) => (
                       <li key={index} className="flex items-start">
@@ -219,7 +219,7 @@ const HowItWorks = () => {
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ delay: 0.8 }}
-  className="mt-16 bg-gradient-to-br from-white to-gray-50 p-8 "
+  className="mt-16 bg-gradient-to-br from-white rounded-xl shadow-md to-gray-50 p-8 "
 >
   <div className="text-center mb-10">
     <h2 className="text-3xl font-bold text-emerald-600 mb-3 font-serif">

@@ -8,20 +8,6 @@ import { motion } from 'framer-motion';
 export default function TreatmentsPage() {
   const treatments = [
     {
-      name: "Wegovy (Semaglutide)",
-      slug: "wegovy",
-      price: "£125/month",
-      highlights: [
-        "FDA-approved medication",
-        "Reduces appetite",
-        "Weekly injection",
-        "Lose up to 15% weight",
-      ],
-      description:
-        "Helps reduce appetite and calorie intake for effective weight management.",
-      image: "/images/wegovy-main.png",
-    },
-    {
       name: "Mounjaro (Tirzepatide)",
       slug: "mounjaro",
       price: "£140/month",
@@ -34,6 +20,20 @@ export default function TreatmentsPage() {
       description:
         "Regulates blood sugar and promotes weight loss through dual hormone action.",
       image: "/images/mounjaro-main.jpeg",
+    },
+        {
+      name: "Wegovy (Semaglutide)",
+      slug: "wegovy",
+      price: "£125/month",
+      highlights: [
+        "FDA-approved medication",
+        "Reduces appetite",
+        "Weekly injection",
+        "Lose up to 15% weight",
+      ],
+      description:
+        "Helps reduce appetite and calorie intake for effective weight management.",
+      image: "/images/wegovy-main.png",
     },
   ];
 
@@ -123,8 +123,8 @@ export default function TreatmentsPage() {
           </div>
           <div className="py-12 px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-4xl overflow-x-auto shadow-md rounded-lg">
-              <div className="overflow-hidden rounded-xl border border-gray-200 shadow-md">
-  <table className="min-w-full divide-y divide-gray-200">
+              <div className=" rounded-xl border border-gray-200 shadow-md">
+  <table className="min-w-full divide-y divide-gray-200 ">
     <caption className="sr-only">Comparison between Mounjaro and Wegovy treatments</caption>
     <thead className="bg-gray-50">
       <tr>
