@@ -191,7 +191,7 @@ export default function TreatmentsPage() {
     <tfoot>
       <tr>
         <td colSpan={3} className="px-6 py-3 text-xs text-gray-500 bg-gray-50 rounded-b-xl">
-          * Either BMI more than 30 or more than 27 with a cardiovascular disease 
+          * Either BMI above 30 or more than 27 with a cardiovascular disease 
          </td>
       </tr>
     </tfoot>

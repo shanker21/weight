@@ -8,10 +8,10 @@ export async function POST(request: Request) {
     const { name, email, phone, message, to } = await request.json();
     
     const { data, error } = await resend.emails.send({
-    //   from: 'WeightGone <no-reply@weightgone.co.uk>',
+      from: 'WeightGone <info@weightgone.co.uk>',
     //   to: to,
-        from: 'Acme <onboarding@resend.dev>',
-        to: 'usrealtyltd@gmail.com',
+        // from: 'Acme <onboarding@resend.dev>',
+        to: 'info@weightgone.co.uk',
       subject: `New contact form submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">

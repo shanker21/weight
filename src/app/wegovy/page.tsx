@@ -131,10 +131,10 @@ const variants = Object.keys(clinicVariables.PRICING.WEGOVY).map((dosage) => ({
             <div className="mb-6">
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-gray-900">
-                  £{variants[selectedVariant].price}
+                  £{variants[selectedVariant].price}<span className="text-2xl text-gray-800">/month</span>
                 </span>
-                <span className="text-xl text-gray-500">
-                  £{variants[selectedVariant].weeklyPrice} per week
+                <span className="text-xl text-gray-500 ml-4">
+                  £{variants[selectedVariant].weeklyPrice}/week
                 </span>
               </div>
               <p className="text-md text-gray-500 mt-1">Eligible for BMI of 27* or 30 kg/m²
@@ -321,7 +321,7 @@ const variants = Object.keys(clinicVariables.PRICING.WEGOVY).map((dosage) => ({
                 <div className="mt-8 bg-blue-50 p-6 rounded-lg">
                   <h4 className="text-lg font-medium text-gray-800 mb-3">Dosing Schedule</h4>
                   <p className="text-gray-700">
-                    Wegovy treatment begins with a 4-week dose escalation period, starting at 0.25mg and stepping up the dose every 4 weeks before reaching the maintenance dose of 2.5mg weekly. This gradual increase helps minimize side effects.
+                    Wegovy treatment begins with a 4-week dose escalation period, starting at 0.25mg and stepping up the dose every 4 weeks before reaching the maintenance dose of 2.4mg weekly. This gradual increase helps minimize side effects.
                   </p>
                 </div>
               </div>
