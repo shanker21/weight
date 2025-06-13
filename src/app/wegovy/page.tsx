@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from "../../components/header";
 import Link from 'next/link';
-
+import { clinicVariables } from '@/utils/constants';
 
 export default function WegovyPage() {
   const [selectedVariant, setSelectedVariant] = useState(0);
@@ -12,45 +12,16 @@ export default function WegovyPage() {
   const [activeTab, setActiveTab] = useState('how-to-take');
 
 
-  const variants = [
-    {
-      dosage: '0.25mg',
-      price: 125.00,
-      weeklyPrice: 31.25,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '0.5mg',
-      price: 135.00,
-      weeklyPrice: 33.75,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '1mg',
-      price: 145.00,
-      weeklyPrice: 36.25,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '1.7mg',
-      price: 185.00,
-      weeklyPrice: 46.25,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '2.5mg',
-      price: 230.00,
-      weeklyPrice: 57.50,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-  ];
+const variants = Object.keys(clinicVariables.PRICING.WEGOVY).map((dosage) => ({
+  dosage,
+  price: clinicVariables.PRICING.WEGOVY[dosage],
+  weeklyPrice: clinicVariables.WEEKLY_PRICING.WEGOVY[dosage],
+  inStock: true, 
+  quantity: '1 x pre-filled pen (4 weekly doses)' 
+}));
+
   const dosages = '/images/wegovy-dosage.png';
-  // Sample images - replace with your actual image paths
+
   const images = [
     '/images/wegovy-main.png',
     '/images/wegovy-1.png',
@@ -160,10 +131,10 @@ export default function WegovyPage() {
             <div className="mb-6">
               <div className="flex items-baseline gap-2">
                 <span className="text-3xl font-bold text-gray-900">
-                  £{variants[selectedVariant].price.toFixed(2)}
+                  £{variants[selectedVariant].price}
                 </span>
                 <span className="text-xl text-gray-500">
-                  £{variants[selectedVariant].weeklyPrice.toFixed(2)} per week
+                  £{variants[selectedVariant].weeklyPrice} per week
                 </span>
               </div>
               <p className="text-md text-gray-500 mt-1">Eligible for BMI of 27* or 30 kg/m²

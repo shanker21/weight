@@ -1,6 +1,9 @@
 import React from 'react'
+import { clinicVariables } from '@/utils/constants'
 
 export default function Footer() {
+  const mobile = clinicVariables.CLINIC_INFO.PHONE;
+
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8">
     <div className="container mx-auto px-4">
@@ -119,7 +122,7 @@ export default function Footer() {
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                 ></path>
               </svg>
-              +44 161 948 5066
+              {mobile}
             </li>
           </ul>
         </div>

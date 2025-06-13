@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
+import { clinicVariables } from '../utils/constants';
 
 export default function FloatingWhatsApp() {
-  const phoneNumber = '+447383250055';
-  const message = 'Hello! I am interested in your Weightloss treatments.';
+  const phoneNumber = clinicVariables.CLINIC_INFO.WHATSAPP_NUMBER;
+  const message = clinicVariables.CLINIC_INFO.WHATSAPP_MESSAGE;
 
   const [showText, setShowText] = useState(true);
 
