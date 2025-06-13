@@ -124,6 +124,9 @@ export default function Footer() {
               </svg>
               {mobile}
             </li>
+            <li className="flex items-center">
+              Altrincham Travel Vaccination Centre <br />250 Stockport Rd, Timperley, <br /> WA15 7UN, UK
+            </li>
           </ul>
         </div>
       </div>
