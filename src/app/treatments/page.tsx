@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { motion } from 'framer-motion';
+import { clinicVariables } from "@/utils/constants";
+
 
 
 export default function TreatmentsPage() {
@@ -10,7 +12,7 @@ export default function TreatmentsPage() {
     {
       name: "Mounjaro (Tirzepatide)",
       slug: "mounjaro",
-      price: "£140/month",
+      price: clinicVariables.PRICING.MOUNJARO["2.5mg"],
       highlights: [
         "Dual-action formula",
         "Weekly injection",
@@ -24,7 +26,7 @@ export default function TreatmentsPage() {
         {
       name: "Wegovy (Semaglutide)",
       slug: "wegovy",
-      price: "£125/month",
+      price: clinicVariables.PRICING.WEGOVY["0.25mg"],
       highlights: [
         "FDA-approved medication",
         "Reduces appetite",
@@ -86,7 +88,7 @@ export default function TreatmentsPage() {
                       {treatment.name}
                     </h2>
                     <span className="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-lg font-semibold">
-                      {treatment.price}
+                      £{treatment.price}/month
                     </span>
                   </div>
 

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Header from "../../components/header";
 import Link from 'next/link';
+import { clinicVariables } from '@/utils/constants';
 
 
 export default function MounjaroPage() {
@@ -11,50 +12,13 @@ export default function MounjaroPage() {
   const [currentImage, setCurrentImage] = useState(0);
   const [activeTab, setActiveTab] = useState('how-to-take');
 
-  const variants = [
-    {
-      dosage: '2.5mg',
-      price: 140.00,
-      weeklyPrice: 35.00,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '5mg',
-      price: 160.00,
-      weeklyPrice: 40.00,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '7.5mg',
-      price: 160.00,
-      weeklyPrice: 40.00,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '10mg',
-      price: 180.00,
-      weeklyPrice: 45.00,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '12.5mg',
-      price: 180.00,
-      weeklyPrice: 45.00,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-    {
-      dosage: '15mg',
-      price: 200.00,
-      weeklyPrice: 50.00,
-      inStock: true,
-      quantity: '1 x pre-filled pen (4 weekly doses)',
-    },
-  ];
+const variants = Object.keys(clinicVariables.PRICING.MOUNJARO).map((dosage) => ({
+  dosage,
+  price: clinicVariables.PRICING.MOUNJARO[dosage],
+  weeklyPrice: clinicVariables.WEEKLY_PRICING.MOUNJARO[dosage],
+  inStock: true, 
+  quantity: '1 x pre-filled pen (4 weekly doses)' 
+}));
 
   const dosages = '/images/mounjaro-dosage.png';
   const images = [
@@ -142,34 +106,43 @@ export default function MounjaroPage() {
           <div className="md:w-1/2">
             <h1 className="text-3xl font-bold text-gray-900 mb-2">Mounjaro (Tirzepatide)</h1>
             <p className="text-lg text-gray-600 mb-4">by Eli Lilly</p>
+ <div className="mb-6">
+        <div className="flex flex-wrap gap-2">
+          {variants.map((variant, index) => (
+            <button
+              key={index}
+              onClick={() => handleVariantSelect(index)}
+              disabled={!variant.inStock}
+              className={`px-4 py-2 rounded-md border transition-all ${
+                selectedVariant === index 
+                  ? 'bg-blue-100 border-blue-500 text-blue-700' 
+                  : 'border-gray-300 hover:border-gray-400 text-gray-700'
+              } ${
+                !variant.inStock ? 'opacity-50 cursor-not-allowed' : ''
+              }`}
+            >
+              <div className="font-medium">{variant.dosage}</div>
+            </button>
+          ))}
+        </div>
+      </div>
 
-            <div className="mb-6">
-              <div className="flex flex-wrap gap-2">
-                {variants.map((variant, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleVariantSelect(index)}
-                    disabled={!variant.inStock}
-                    className={`px-4 py-2 rounded-md border transition-all ${selectedVariant === index ? 'bg-blue-100 border-blue-500 text-blue-700' : 'border-gray-300 hover:border-gray-400 text-gray-700'} ${!variant.inStock ? 'opacity-50 cursor-not-allowed' : ''}`}
-                  >
-                    <div className="font-medium">{variant.dosage}</div>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <div className="flex items-baseline gap-2">
-                <span className="text-3xl font-bold text-gray-900">
-                  £{variants[selectedVariant].price.toFixed(2)}
-                </span>
-                <span className="text-xl text-gray-500">
-                  £{variants[selectedVariant].weeklyPrice.toFixed(2)} per week
-                </span>
-              </div>
-              <p className="text-md text-gray-500 mt-1">Eligible for BMI of 27* or 30 kg/m²
-              <span className="text-md underline text-blue-500 ml-2"><Link href="/how-it-works#eligibility">*Check Eligibility </Link></span></p>
-            </div>
+      <div className="mb-6">
+        <div className="flex items-baseline gap-2">
+          <span className="text-3xl font-bold text-gray-900">
+            £{variants[selectedVariant].price}
+          </span>
+          <span className="text-xl text-gray-500">
+            £{variants[selectedVariant].weeklyPrice} per week
+          </span>
+        </div>
+        <p className="text-md text-gray-500 mt-1">
+          Eligible for BMI of 27* or 30 kg/m²
+          <span className="text-md underline text-blue-500 ml-2">
+            <Link href="/how-it-works#eligibility">*Check Eligibility</Link>
+          </span>
+        </p>
+      </div>
 
             <div className="mb-8">
               <Link href="/consult">

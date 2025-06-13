@@ -4,8 +4,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import Link from 'next/link';
+import { clinicVariables } from '@/utils/constants';
 
 export default function ContactPage() {
+    const mobile = clinicVariables.CLINIC_INFO.PHONE;
+
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -193,7 +196,7 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
                                         <a href="tel:+441612142345" className="text-emerald-600 hover:underline">
-                                            +44 161 948 5066
+                                            {mobile}
                                         </a>
                                         <p className="text-gray-600 mt-1">Mon-Fri: 9am-5pm</p>
                                     </div>
