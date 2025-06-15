@@ -194,8 +194,13 @@ export default function BMICalculator() {
     To be eligible for our weight loss treatments, you typically need:
   </p>
   <p className="text-sm text-blue-800 list-disc list-inside space-y-1">
-
-    <b>BMI ≥27</b> or greater in the presence of least one weight-related condition:
+    <ol className="list-inside list-decimal text-blue-800 ">
+      <li>To be between ages 18 and 75</li>
+      <li><b>BMI ≥ 30 </b> <br /></li>
+      <span className="ml-6">[or] <br /> </span> 
+      <span className="ml-4 block">
+      <b>BMI ≥27</b> in the presence of least one weight-related condition as: </span>
+    </ol>
 </p>
   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 mt-2 ml-4">
     <ul className="text-sm text-blue-800 list-disc list-inside space-y-1">
