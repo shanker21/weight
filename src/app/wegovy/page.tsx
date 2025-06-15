@@ -359,7 +359,7 @@ const variants = Object.keys(clinicVariables.PRICING.WEGOVY).map((dosage) => ({
                   Wegovy is suitable for:
                 </p>
                 <ul className="mt-2 space-y-2">
-                  <li>Adults aged 18 to 75</li>
+                  <li>Adults aged 18 to 83</li>
                   <li>Adults with obesity (BMI ≥ 30)</li>
                   <li>Adults who are overweight (BMI ≥ 27) with at least one weight-related condition</li>
                   <li>People with conditions like type 2 diabetes, high blood pressure, or high cholesterol</li>
@@ -371,7 +371,7 @@ const variants = Object.keys(clinicVariables.PRICING.WEGOVY).map((dosage) => ({
                 <div className="mt-6 bg-yellow-50 p-4 rounded-md border border-yellow-200">
                   <h4 className="font-medium text-yellow-800 mb-2">Who Should Not Take Wegovy</h4>
                   <ul className="list-disc pl-5 space-y-1 text-yellow-700">
-                    <li>People over 75 years old</li>
+                    <li>People over 83 years old</li>
                     <li>Pregnant or breastfeeding women</li>
                     <li>People with a history of pancreatitis</li>
                     <li>People with a history of gallbladder disease</li>
