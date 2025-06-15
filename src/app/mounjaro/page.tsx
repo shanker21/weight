@@ -145,7 +145,7 @@ const variants = Object.keys(clinicVariables.PRICING.MOUNJARO).map((dosage) => (
       </div>
 
             <div className="mb-8">
-              <Link href="/consult">
+              <Link href="/consultation">
               <button
                 className={`w-full cursor-pointer py-3 px-4 rounded-md font-medium text-white transition-all ${variants[selectedVariant].inStock ? 'bg-emerald-600 hover:bg-emerald-700' : 'bg-gray-400 cursor-not-allowed'}`}
               >

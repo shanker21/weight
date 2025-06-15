@@ -148,7 +148,7 @@ const HowItWorks = () => {
                   </h3>
                   <ul className="space-y-3 text-gray-700">
                     {[
-                      "Aged 18–75 years",
+                      "Aged 18 - 75 years",
                       "BMI 30+ (or 27+ with weight-related comorbidity such as Hypertension, Dyslipidaemia, Prediabetes or Cardiovascular diseases)",
                       "No contraindications to weight loss medications"
                     ].map((item, index) => (
