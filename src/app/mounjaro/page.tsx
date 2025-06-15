@@ -319,7 +319,7 @@ const variants = Object.keys(clinicVariables.PRICING.MOUNJARO).map((dosage) => (
                   Mounjaro is suitable for:
                 </p>
                 <ul className="mt-2 space-y-2">
-                  <li>Adults aged 18 to 75</li>
+                  <li>Adults aged 18 to 83</li>
                   <li>Adults with obesity (BMI ≥ 30)</li>
                   <li>Adults who are overweight (BMI ≥ 27) with weight-related conditions</li>
                   <li>Patients with type 2 diabetes</li>
@@ -329,7 +329,7 @@ const variants = Object.keys(clinicVariables.PRICING.MOUNJARO).map((dosage) => (
                 <div className="mt-6 bg-yellow-50 p-4 rounded-md border border-yellow-200">
                   <h4 className="font-medium text-yellow-800 mb-2">Who Should Not Take Mounjaro</h4>
                   <ul className="list-disc pl-5 space-y-1 text-yellow-700">
-                    <li>People over 75 years old</li>
+                    <li>People over 83 years old</li>
                     <li>Pregnant or breastfeeding women</li>
                     <li>People with a personal/family history of medullary thyroid carcinoma</li>
                     <li>People with Multiple Endocrine Neoplasia syndrome type 2 (MEN 2)</li>
