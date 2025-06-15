@@ -154,7 +154,7 @@ const ChevronSteps = () => {
                     <div
                         key={index}
                         className={`relative transition-all duration-300 w-full ${index === activeStep
-                            ? `z-10 flex-[2.5] my-[-15px] ${index === 0
+                            ? `z-10 flex-[2.5] my-[-1px] ${index === 0
                                 ? 'active-step-top'
                                 : index === steps.length - 1
                                     ? 'active-step-bottom'
