@@ -50,6 +50,50 @@ body {
   clip-path: polygon(0 0, 85% 0, 100% 50%, 85% 100%, 0 100%, 15% 50%) !important;
 }
 
+/* ------------------------------- */
+/* Vertical Chevron Shapes */
+.clip-step-top {
+  clip-path: polygon(0 0, 50% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
+}
+
+.clip-step-center {
+  clip-path: polygon(0% 0%,
+    50% 20%,
+    100% 0%,
+    100% 80%,
+    50% 100%,
+    0% 80%);
+}
+
+.clip-step-bottom {
+  clip-path: polygon(0% 0%,
+    50% 20%,
+    100% 0%,
+    100% 80%,
+    50% 100%,
+    0% 80%);
+}
+
+.active-step-top {
+  clip-path: polygon(0 0%, 100% 0, 100% 0%, 100% 93%, 50% 100%, 0 93%) !important;
+}
+
+.active-step-center {
+  clip-path: polygon(0 0%, 50% 8%, 100% 0%, 100% 90%, 50% 97%, 0 90%) !important;
+}
+
+.active-step-bottom {
+  clip-path: polygon(0 0%, 50% 10%, 100% 0%, 100% 100%, 50% 100%, 0% 100%) !important;
+}
+
+/* Adjust container height as needed */
+@media (max-width: 767px) {
+  .vertical-chevron-container {
+    height: 600px;
+  }
+}
+
+
 @keyframes ping-mini {
   0% {
     transform: scale(1);
