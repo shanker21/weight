@@ -195,7 +195,7 @@ export default function BMICalculator() {
   </p>
   <p className="text-sm text-blue-800 list-disc list-inside space-y-1">
     <ol className="list-inside list-decimal text-blue-800 ">
-      <li>To be between ages 18 and 75</li>
+      <li>To be between ages 18 and 83</li>
       <li><b>BMI ≥ 30 </b> <br /></li>
       <span className="ml-6">[or] <br /> </span> 
       <span className="ml-4 block">
