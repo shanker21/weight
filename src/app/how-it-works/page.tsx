@@ -241,16 +241,16 @@ const HowItWorks = () => {
         answer: "While side effects vary by medication, common ones may include temporary nausea, stomach discomfort, or decreased appetite. Our clinicians will guide you on managing any effects."
       },
       {
-        question: "How quickly will I receive my order?",
-        answer: "Orders approved before 3PM are dispatched the same business day (Monday-Friday). We offer next-day delivery options for urgent requests."
+        question: "How soon can I expect treatment to begin?",
+        answer: "You'll receive your first dose during your initial consultation, where our clinicians will guide you through proper administration using the prefilled pen."
       },
       {
         question: "What if I'm not eligible for treatment?",
         answer: "If our assessment shows you're not suitable for medication, we'll provide personalized lifestyle advice or recommend alternative approaches to support your weight loss goals."
       },
       {
-        question: "Is the online consultation secure?",
-        answer: "Absolutely. We use NHS-grade encryption and all consultations are confidential, reviewed by GMC-registered doctors in the UK."
+        question: "Are consultations conducted online or in-person?",
+        answer: "We specialize in face-to-face consultations with our team of GPhC registered physicians. This helps us conduct through physical assessments and build stronger patient-doctor relationships."
       }
     ].map((faq, index) => (
       <div 
