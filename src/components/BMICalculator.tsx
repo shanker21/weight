@@ -164,9 +164,9 @@ export default function BMICalculator() {
               <p className="text-gray-700">Your BMI</p>
               <p className="text-3xl text-gray-900 font-bold">{bmi}</p>
             </div>
-            <div className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">
+            {/*<div className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">
               {category} 
-            </div>  
+            </div>  */}
           </div>
         </motion.div>
       ) : (
@@ -179,10 +179,10 @@ export default function BMICalculator() {
           <div className="text-center">
             <p className="text-gray-700 font-medium">{category}</p>
             {(height === 0) && (weight) && (
-              <p className="text-sm text-gray-500 mt-1">You aren't a black hole are you?</p>
+              <p className="text-sm text-gray-500 mt-1">Fill Height!</p>
             )}
             {(weight === 0) && (height) && (
-              <p className="text-sm text-gray-500 mt-1">Even air has some weight!</p>
+              <p className="text-sm text-gray-500 mt-1">Enter Weight!</p>
             )}
           </div>
         </motion.div>
