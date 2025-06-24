@@ -40,19 +40,19 @@ export default function BMICalculator() {
 
     if (heightInMeters > 300) {
       setBmi(null);
-      setCategory("You ain't that tall!!");
+      setCategory("Please enter correct height!");
       return;
     }
 
     if (weightInKg > 500) {
         setBmi(null);
-        setCategory("Mukbang King");
+        setCategory("Please re-check units.");
         return;
       }
 
     if (heightInMeters < 50 || weightInKg < 2) {
       setBmi(null);
-      setCategory("Are you a newborn baby?");
+      setCategory("Please re-check values.");
       return;
     }
 
@@ -64,7 +64,7 @@ export default function BMICalculator() {
     // Handle potential infinity (division by zero)
     if (!isFinite(bmiValue)) {
       setBmi(null);
-      setCategory("Zero height? You must be a black hole! 🕳️");
+      setCategory("Enter Height!");
       return;
     }
 
@@ -164,9 +164,9 @@ export default function BMICalculator() {
               <p className="text-gray-700">Your BMI</p>
               <p className="text-3xl text-gray-900 font-bold">{bmi}</p>
             </div>
-            {/*<div className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">
+            <div className="bg-emerald-600 text-white px-3 py-1 rounded-full text-sm">
               {category} 
-            </div>  */}
+            </div> 
           </div>
         </motion.div>
       ) : (
