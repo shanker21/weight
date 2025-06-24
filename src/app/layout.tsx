@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from 'next/script';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
@@ -30,7 +31,13 @@ export const metadata: Metadata = {
     description: "Safe and effective weight loss treatments",
     url: "https://www.weightgone.co.uk",
     siteName: "WeightGone UK",
-    images: '/og-image.png',
+    images: [
+      {
+        url: '/og-image.png', 
+        width: 1200,
+        height: 630,
+      },
+    ],
     locale: "en_UK",
     type: "website",
   },
@@ -38,7 +45,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "WeightGone UK",
     description: "Safe and effective weight loss treatments",
-    images: ['/og-image.png'],
+     images: [
+      {
+        url: '/og-image.png', 
+        width: 1200,
+        height: 630,
+      },
+    ],
   },
 };
 
@@ -50,6 +63,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=G-3HRSZ29MPR`}
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3HRSZ29MPR', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         {/* Fallback links */}
         <link rel="shortcut icon" href="/icon.ico" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
