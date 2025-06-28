@@ -47,7 +47,7 @@ const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Safe & Simple Process</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Attentive yet Effective Process</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Get started with your weight loss treatment in just a few easy steps
           </p>
@@ -234,7 +234,7 @@ const HowItWorks = () => {
     {[
       {
         question: "Do I need a prescription for weight loss medications?",
-        answer: "Yes, all our medical treatments require a prescription. Our online consultation with a UK-registered prescriber ensures you get safe, approved medications tailored to your needs."
+        answer: "Yes, all our medical treatments require a prescription. Our online consultation with a UK-registered prescriber ensures you get approved medications tailored to your needs."
       },
       {
         question: "What are the common side effects?",

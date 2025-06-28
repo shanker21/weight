@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WeightGone UK | Safe Weight Loss Treatments",
+  title: "WeightGone UK | Effective Weight Loss Treatments",
   description: "Clinically proven weight loss treatments delivered across the UK. Book your appointment today.",
   icons: {
     icon: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "WeightGone UK",
-    description: "Safe and effective weight loss treatments",
+    description: "Effective weight loss treatments",
     url: "https://www.weightgone.co.uk",
     siteName: "WeightGone UK",
     images: [
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "WeightGone UK",
-    description: "Safe and effective weight loss treatments",
+    description: "Effective weight loss treatments",
      images: [
       {
         url: '/og-image.png', 

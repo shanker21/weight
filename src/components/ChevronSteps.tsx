@@ -27,7 +27,7 @@ const ChevronSteps = () => {
             description: (
                 <>
                     Meet with our clinicians to discuss your medical history, lifestyle, and
-                    ensure it's safe for you to begin your weight loss journey. We'll:
+                    ensure it's reliable for you to begin your weight loss journey. We'll:
                     <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
                         <li>Review your health background</li>
                         <li>Identify any underlying conditions</li>

@@ -103,9 +103,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2 z-10">
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  Achieve Your <br /><span className="text-teal-950">WEIGHTLOSS GOALS</span><br />
-                  <span className="text-emerald-600">Safely</span> and{" "}
-                  <span className="text-emerald-600">Effectively</span>
+                  Achieve Your <br /><span className="bg-gradient-to-t to-emerald-800 from-blue-800 bg-clip-text text-transparent">WEIGHTLOSS GOALS</span><br />
+                  {/* <span className="text-emerald-600">Safely</span> and{" "} */}
+                  <span className="text-emerald-900">Effectively</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8">
                   Explore clinically approved weightloss treatments at WeightGone
@@ -271,7 +271,7 @@ export default function Home() {
                 Your Step-by-Step Weight Loss Journey
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Our clinically-proven process ensures safe, effective weight management
+                Our clinically-proven process ensures attentive and effective weight management
                 tailored to your individual needs.
               </p>
             </div>
@@ -333,7 +333,7 @@ export default function Home() {
               Ready to Start Your Weight Loss Journey?
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Take the first step today with our safe, effective treatments.
+              Take the first step today with our effective treatments.
             </p>
             <Link
               href="/consultation">

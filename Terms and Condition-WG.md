@@ -26,7 +26,7 @@ All clinical services are provided by appropriately qualified healthcare profess
 
 3. Booking Appointments
 
-Appointments can be made via our website, by phone, or in person. When booking, you must provide accurate and complete information. If you fail to do so, we may not be able to provide the service effectively or safely.
+Appointments can be made via our website, by phone, or in person. When booking, you must provide accurate and complete information. If you fail to do so, we may not be able to provide the service effectively.
 
 4. Charges and Payment
 
