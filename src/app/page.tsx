@@ -7,7 +7,6 @@ import { FaShieldAlt, FaClinicMedical, FaUserMd, FaHeadset } from 'react-icons/f
 import Image from "next/image";
 import { useInView } from 'react-intersection-observer';
 import ChevronSteps from '@/components/ChevronSteps';
-import { Mail, Phone } from 'lucide-react';
 
 interface ScrollAnimationProps {
   children: ReactNode;
@@ -104,24 +103,24 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2 z-10">
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  Transform Your <br /><span className="bg-gradient-to-t to-emerald-800 from-blue-800 bg-clip-text text-transparent">Life with </span><br />
+                  Achieve Your <br /><span className="bg-gradient-to-t to-emerald-800 from-blue-800 bg-clip-text text-transparent">WEIGHTLOSS GOALS</span><br />
                   {/* <span className="text-emerald-600">Safely</span> and{" "} */}
-                  <span className="text-emerald-900">WeightGone UK</span>
+                  <span className="text-emerald-900">Effectively</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8">
-                  Clinically proven procedures, breakthrough medications and unmatched support face-to-face across the UK.
+                  Explore clinically approved weightloss treatments at WeightGone
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
                     href="/consultation">
                     <button className="cursor-pointer bg-emerald-600 hover:bg-emerald-700 text-white font-medium py-3 px-6 border-emerald-600 border-2 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-emerald-200">
-                      Book Your Free Consultation
+                      Book My Appointment
                     </button>
                   </Link>
                   <Link
-                    href="/how-it-works#eligibility">
+                    href="/treatments">
                     <button className="cursor-pointer border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-medium py-3 px-6 rounded-lg transition-all duration-300 hover:shadow-md">
-                      Check Your Eligibility
+                      Browse Treatments
                     </button>
                   </Link>
                 </div>
@@ -170,181 +169,7 @@ export default function Home() {
         </section>
       </ScrollAnimation>
 
-
-      <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-8">
-      <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4 mt-4">
-        Transformative Treatments
-      </span>
-      <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-        From bespoke diet & exercise programmes and minimally invasive endoscopic procedures to life-changing surgical operations, our clinically proven interventions are tailored for maximum results.
-      </p>
-
-      {/* Centered Bullet List */}
-      <div className="mt-6 space-y-3 flex flex-col items-center">
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-          <span className="text-gray-700">Precision Diet & Exercise Plans</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-          <span className="text-gray-700">Minimally Invasive Endoscopic Options</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-          <span className="text-gray-700">Life-Changing Surgical Operations</span>
-        </div>
-      </div>
-    </div>
-
-    <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto mt-8">
-      <Link href="/clinic" className="w-full sm:w-auto">
-        <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg animate-bounce cursor-pointer flex items-center justify-center gap-2">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path
-              fillRule="evenodd"
-              d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Find a Clinic Near You
-        </button>
-      </Link>
-    </div>
-  </div>
-</section>
-
-
-
-       <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-              <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4 mt-4">
-                Total Care Services
-              </span>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Enjoy expert consultations, eligibility assessments, personalised aftercare and flexible booking via phone or WhatsApp every step supported by our multidisciplinary team.
-            </p>
-              <div className="mt-6 space-y-3 flex flex-col items-center">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-                  <span className="text-gray-700">Precision Diet & Exercise Plans</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-                  <span className="text-gray-700">Minimally Invasive Endoscopic Options</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
-                  <span className="text-gray-700">Life-Changing Surgical Operations</span>
-                </div>
-              </div>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto mt-8">
-            <Link href="/consultation" className="w-full sm:w-auto">
-              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg animate-bounce cursor-pointer flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Book Your Free Consultation
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-        <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-              <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4 mt-4">
-                Our Pillars of Excellence
-              </span>
-              <div className="mt-6 space-y-4 max-w-3xl mx-auto">
-                {[
-                  {
-                    title: "GPhC-Registered Prescribers:",
-                    text: "Every one of our pharmacists holds full GPhC registration, so you can count on every prescription being safe and accurate.",
-                  },
-                  {
-                    title: "UK-Licensed Pharmacy:",
-                    text: "All medicines are dispensed by our UK-licensed pharmacy, guaranteeing the quality checks and legal rules you expect.",
-                  },
-                  {
-                    title: "Face-to-Face Confidential Care:",
-                    text: "Every appointment happens face-to-face or through a secure video link, so your privacy stays protected and your care feels genuinely tailored to you.",
-                  },
-                  {
-                    title: "Ongoing Clinical Support:",
-                    text: "From your very first appointment through long-term follow-up, our clinical team is here to guide and motivate you.",
-                  },
-                ].map((item, index) => (
-                  <div key={index} className="flex items-start gap-3 text-left">
-                    <div className="mt-2 w-2 h-2 bg-emerald-500 rounded-full flex-shrink-0"></div>
-                    <p className="text-gray-700">
-                      <strong>{item.title}</strong> {item.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto mt-8">
-            <Link href="/consultation" className="w-full sm:w-auto">
-              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg animate-bounce cursor-pointer flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Book Your Free Consultation
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-8">
-              <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4 mt-4">
-                UK-Wide Clinics
-              </span>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-               With clinics spread across London, Manchester, Birmingham, Leeds, Glasgow and Bristol, we're never far away when you need face-to-face weight-loss support. Inside every centre, our team of doctors, dietitians, therapists and trainers is ready to give you the same tailored check-up, modern treatment and lasting encouragement you count on from WeightGone UK.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto mt-8">
-            <Link href="/clinic" className="w-full sm:w-auto">
-              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg animate-bounce cursor-pointer flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Find a Clinic Near You
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4 ">
-          <div className="text-center mb-8">
-              <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4 mt-4">
-                What Our Patients Say
-              </span>
-              <ol className="list-decimal pl-5 text-lg text-gray-600 max-w-3xl mx-auto">
-                <li>I lost 18 kg in six months thanks to the bespoke diet & exercise plan and weekly Monjaro injections. The ongoing support from my dietitian and nurse made all the difference!
-                  – Sarah J., 42, Manchester
-                </li>
-                <li>The endoscopic sleeve gastroplasty was quick and minimally invasive. I was back at work within a week, and I’ve kept off 25 kg a year on. Truly life-changing!
-                  – David R., 35, London
-                </li>
-                <li>From my first face-to-face consultation to the regular follow-ups, the team has been incredible. I feel supported every step of the way and highly recommend it!
-                  – Aisha K., 29, Birmingham
-                </li>
-              </ol>
-          </div>
-        </div>
-      </section>
-
-      {/* <section className="pb-16 pt-12 bg-gradient-to-b from-teal-50 to-white">
+      <section className="pb-16 pt-12 bg-gradient-to-b from-teal-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -386,11 +211,11 @@ export default function Home() {
             </div>
           </ScrollAnimation>
         </div>
-      </section> */}
+      </section>
 
       {/* Popular Treatments */}
 
-      {/* <section className="py-14 bg-white">
+      <section className="py-14 bg-white">
         <div className="container mx-auto px-4">
           {/* <div className="text-center mb-12">
             <Link href="/treatments">
@@ -405,7 +230,7 @@ export default function Home() {
             </Link>
           </div> */}
 
-          {/* <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto">
+          <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto">
             <Link href="/treatments" className="w-full sm:w-auto">
               <button className="w-full bg-white border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-md flex items-center cursor-pointer animate-bounce justify-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -424,35 +249,40 @@ export default function Home() {
               </button>
             </Link>
           </div>
-        </div> */}
-      {/* </section> */} 
+        </div>
+      </section>
 
       {/* How It Works */}
-      {/* <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
+      <section className="pb-16 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
+            <Link href="/how-it-works">
               <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                UK-Wide Clinics
+                Our Process
               </span>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-               With clinics spread across London, Manchester, Birmingham, Leeds, Glasgow and Bristol, we're never far away when you need face-to-face weight-loss support. Inside every centre, our team of doctors, dietitians, therapists and trainers is ready to give you the same tailored check-up, modern treatment and lasting encouragement you count on from WeightGone UK.
-            </p>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 max-w-2xl mx-auto mt-8">
-            <Link href="/clinic" className="w-full sm:w-auto">
-              <button className="w-full bg-gradient-to-r from-emerald-400 to-blue-400 text-white font-medium py-4 px-8 rounded-lg transition-all duration-300 hover:shadow-lg animate-bounce cursor-pointer flex items-center justify-center gap-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                Find a Clinic Near You
-              </button>
+            </Link>
+            <Link href="/how-it-works">
+              <h2 className="text-3xl font-bold text-gray-900">How It Works</h2>
             </Link>
           </div>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-800 mb-4">
+                Your Step-by-Step Weight Loss Journey
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Our clinically-proven process ensures attentive and effective weight management
+                tailored to your individual needs.
+              </p>
+            </div>
+
+            <ChevronSteps />
+          </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Testimonials */}
-      {/* <section className="py-16 bg-white">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
@@ -493,7 +323,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Final CTA */}
       <ScrollAnimation delay={200}>
