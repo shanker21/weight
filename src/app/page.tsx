@@ -272,7 +272,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 Our clinically-proven process ensures attentive and effective weight management
-                tailored to your individual needs.
+                tailored to your individual needs..
               </p>
             </div>
 
