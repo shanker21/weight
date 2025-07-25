@@ -14,8 +14,8 @@ export default function AboutUs() {
     },
     {
       icon: <FaClinicMedical className="text-3xl text-emerald-600" />,
-      title: "UK Clinics Near You",
-      description: "Our welcoming clinics in London, Manchester, Birmingham, and plenty of smaller towns are just a quick trip from where you live."
+      title: "Evidence-Led Treatments",
+      description: " Everything we do is built on solid research and real patient success stories just like yours."
     },
     {
       icon: <FaPoundSign className="text-3xl text-emerald-600" />,
@@ -29,13 +29,13 @@ export default function AboutUs() {
     },
     {
       icon: <FaThumbsUp className="text-3xl text-emerald-600" />,
-      title: "Proven satisfaction rates",
-      description: "94% of our patients report achieving their weight loss goals within their target timeframe."
+      title: "Transparent Prices",
+      description: "We Help you with no hiding fees or confusing terms."
     },
     {
       icon: <FaMapMarkerAlt className="text-3xl text-emerald-600" />,
-      title: "Manchester specialists",
-      description: "Particularly experienced with Greater Manchester communities."
+      title: "UK Clinics Near You",
+      description: "Our welcoming clinics in London, Manchester, Birmingham, and plenty of smaller towns are just a quick trip from where you live."
     }
   ];
 
@@ -54,7 +54,7 @@ export default function AboutUs() {
     <div className="max-w-4xl mx-auto">
       
       <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-        Why <span className="text-emerald-700">WeightGone UK</span> Stands Out
+        Why <span className="text-emerald-700">Choose Us?</span>
       </h1>
       <p className="text-xl text-gray-800 mb-2">
         Specializing in personalized, face-to-face care at our Timperly clinic. 

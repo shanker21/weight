@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "WeightGone UK | Effective Weight Loss Treatments",
-  description: "Clinically proven weight loss treatments delivered across the UK. Book your appointment today.",
+  title: "Trusted Weight Loss Clinic in Manchester | WeightGone UK",
+  description: "Get expert support with weight loss treatments at our Manchester clinic. Trusted by many across the UK for effective weight loss solutions and products.",
+  keywords: "About us weightgone , about weight loss treatments",
   icons: {
     icon: [
       { url: '/icon.ico', sizes: 'any' },
