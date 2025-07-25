@@ -23,11 +23,10 @@ const ChevronSteps = () => {
 
      const steps = [
         {
-            title: "Face-to-Face Consultation",
+            title: "Expert Consultation",
             description: (
                 <>
-                    Meet with our clinicians to discuss your medical history, lifestyle, and
-                    ensure it's reliable for you to begin your weight loss journey. We'll:
+                    Meet one‑on‑one with our clinicians to review your medical history, goals and lifestyle so we can build a plan just for you:
                     <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
                         <li>Review your health background</li>
                         <li>Identify any underlying conditions</li>
@@ -37,10 +36,10 @@ const ChevronSteps = () => {
             )
         },
         {
-            title: "Health Assessment",
+            title: "Eligibility Assessment:",
             description: (
                 <>
-                    Comprehensive baseline measurements including:
+                    We’ll determine which treatments and medications are safest and most effective for your individual needs:
                     <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
                         <li>Weight, BMI, and waist circumference</li>
                         <li>Blood pressure checks</li>
@@ -53,10 +52,10 @@ const ChevronSteps = () => {
             )
         },
         {
-            title: "Personalised Weight Loss Plan",
+            title: "Personalised Treatments",
             description: (
                 <>
-                    We'll recommend options based on your needs:
+                    Precision Diet & Exercise Plans- Minimally Invasive Endoscopic Procedures- Life‑Changing Surgical Operations- Elite Pharmacotherapy (Mounjaro, Wegovy, Orlistat):
                     <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
                         <li>Diet and lifestyle adjustments</li>
                         <li>Behavioural support strategies</li>
@@ -69,10 +68,10 @@ const ChevronSteps = () => {
             )
         },
         {
-            title: "Ongoing Monitoring & Support",
+            title: "Dedicated Aftercare",
             description: (
                 <>
-                    Regular check-ins (in-clinic or virtual) to:
+                    Enjoy ongoing check‑ins with dietitians, nurses and trainers plus flexible booking by phone or WhatsApp to keep you on track.
                     <ul className="mt-2 space-y-1 list-disc list-inside text-gray-600">
                         <li>Track your progress</li>
                         <li>Adjust treatment as needed</li>

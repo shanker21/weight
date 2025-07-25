@@ -9,33 +9,33 @@ export default function AboutUs() {
   const features = [
     {
       icon: <FaShieldAlt className="text-3xl text-emerald-600" />,
-      title: "Fully UK-based & regulated",
-      description: "Our clinic operates under the strict GPHC guidelines, ensuring highest standards of care."
+      title: "Rapid Access",
+      description: "Skip long NHS queues- book your first consultation in just a few days."
     },
     {
       icon: <FaClinicMedical className="text-3xl text-emerald-600" />,
-      title: "Clinically approved treatments",
-      description: "We only prescribe medications approved by NICE and MHRA, including Wegovy and Mounjaro."
+      title: "Evidence-Led Treatments",
+      description: " Everything we do is built on solid research and real patient success stories just like yours."
     },
     {
       icon: <FaPoundSign className="text-3xl text-emerald-600" />,
-      title: "Transparent pricing",
-      description: "No hidden fees – our all-inclusive packages cover consultations, medications, and ongoing support."
+      title: "Straightforward Pricing and Payments",
+      description: "You'll know the full cost before you book, and our flexible payment plans let you settle up in a way that fits your budget."
     },
     {
       icon: <FaUserMd className="text-3xl text-emerald-600" />,
-      title: "Personalised medical support",
-      description: "Each patient receives a tailored plan from our GPHC registered pharmacists."
+      title: "Community & Connection",
+      description: "Take part in support groups and the alum network to swap stories and toast each other's milestones.."
     },
     {
       icon: <FaThumbsUp className="text-3xl text-emerald-600" />,
-      title: "Proven satisfaction rates",
-      description: "94% of our patients report achieving their weight loss goals within their target timeframe."
+      title: "Transparent Prices",
+      description: "We Help you with no hiding fees or confusing terms."
     },
     {
       icon: <FaMapMarkerAlt className="text-3xl text-emerald-600" />,
-      title: "Manchester specialists",
-      description: "Particularly experienced with Greater Manchester communities."
+      title: "UK Clinics Near You",
+      description: "Our welcoming clinics in London, Manchester, Birmingham, and plenty of smaller towns are just a quick trip from where you live."
     }
   ];
 
@@ -54,7 +54,7 @@ export default function AboutUs() {
     <div className="max-w-4xl mx-auto">
       
       <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-        Why <span className="text-emerald-700">WeightGone UK</span> Stands Out
+        Why <span className="text-emerald-700">Choose Us?</span>
       </h1>
       <p className="text-xl text-gray-800 mb-2">
         Specializing in personalized, face-to-face care at our Timperly clinic. 
