@@ -37,22 +37,22 @@ export default function Home() {
     {
       icon: <FaShieldAlt className="text-2xl" />,
       title: "GPHC-registered prescribers",
-      description: "Our pharmacists are fully qualified and registered with the GPHC."
+      description: "Every pharmacist on our team holds full GPhC registration your prescriptions are always safe, accurate and tailored to you."
     },
     {
       icon: <FaClinicMedical className="text-2xl" />,
-      title: "Licensed UK pharmacy",
-      description: "All medications are dispensed by a UK licensed pharmacy."
+      title: "UK‑Licensed Pharmacy",
+      description: "All medications are dispensed in‑ houses through our UK‑licensed pharmacy. Quality checks and legal compliance guaranteed."
     },
     {
       icon: <FaUserMd className="text-2xl" />,
-      title: "Face to Face Consultation",
-      description: "Guaranteed confidentiality and personalized care."
+      title: "Face‑to‑Face Confidential",
+      description: " CareEvery appointment is private and personal, whether in‑clinic or via secure video link."
     },
     {
       icon: <FaHeadset className="text-2xl" />,
-      title: "Ongoing clinical support",
-      description: "Our team is available to support you throughout your journey."
+      title: "Ongoing Clinical Support",
+      description: "From your very first consultation through long‑term follow‑up, our multidisciplinary team is here to guide, motivate and celebrate every milestone."
     }
   ];
 
@@ -76,19 +76,19 @@ export default function Home() {
   const testimonials = [
     {
       quote:
-        "I've lost 3 stone in 4 months with WeightGone. The support has been amazing!",
+        "I lost 18 kg in six months thanks to the bespoke diet & exercise plan and weekly Monjaro injections. The ongoing support from my dietitian and nurse made all the difference!",
       author: "Sarah J.",
       rating: 5,
     },
     {
       quote:
-        "Finally found a solution that works for me. The convenience is unbeatable.",
-      author: "Michael T.",
+        "The endoscopic sleeve gastroplasty was quick and minimally invasive. I was back at work within a week, and I’ve kept off 25 kg a year on. Truly life‑changing!.",
+      author: "David R.",
       rating: 5,
     },
     {
-      quote: "Professional service from start to finish. Highly recommend!",
-      author: "Emma L.",
+      quote: "From my first face‑to‑face consultation to the regular follow‑ups, the team has been incredible. I feel supported every step of the way and highly recommend it!",
+      author: "Aisha K.",
       rating: 4,
     },
   ];
@@ -103,12 +103,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2 z-10">
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  Achieve Your <br /><span className="bg-gradient-to-t to-emerald-800 from-blue-800 bg-clip-text text-transparent">WEIGHTLOSS GOALS</span><br />
+                  Transform Your <br /><span className="bg-gradient-to-t to-emerald-800 from-blue-800 bg-clip-text text-transparent">Life with</span><br />
                   {/* <span className="text-emerald-600">Safely</span> and{" "} */}
-                  <span className="text-emerald-900">Effectively</span>
+                  <span className="text-emerald-900">WeightGone UK</span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8">
-                  Explore clinically approved weightloss treatments at WeightGone
+                  Clinically proven procedures, breakthrough medications and unmatched support face‑to‑face across the UK.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -173,10 +173,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-emerald-100 text-emerald-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
-              Why Choose Us
+              Our Pillars
             </span>
             <h2 className="text-3xl font-bold text-gray-900">
-              Why <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">WeightGone.co.uk</span>?
+               <span className="bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent">Our Pillars of Excellence</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
               Discover the difference of working with UK's trusted weight loss specialists
