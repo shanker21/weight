@@ -4,8 +4,9 @@ import path from 'path';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Altrincham Travel Clinic",
-  description: "Read our Privacy Policy...",
+  title: "Privacy Policy | WeightGone UK",
+  description: "Read our privacy policy to understand how WeightGone protects your data and maintains confidentiality for every client.",
+  keywords: "weight loss privacy policy, WeightGone data protection, patient confidentiality, privacy WeightGone, privacy policy UK."
 };
 
 export default function PrivacyPolicy() {

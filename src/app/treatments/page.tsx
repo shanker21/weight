@@ -10,7 +10,7 @@ import { clinicVariables } from "@/utils/constants";
 export default function TreatmentsPage() {
   const treatments = [
     {
-      name: "Mounjaro (Tirzepatide)",
+      name: "Transformative Treatments",
       slug: "mounjaro",
       price: clinicVariables.PRICING.MOUNJARO["2.5mg"],
       highlights: [
@@ -20,11 +20,11 @@ export default function TreatmentsPage() {
         "Blood sugar control",
       ],
       description:
-        "Regulates blood sugar and promotes weight loss through dual hormone action.",
+        "Supports sustainable weight reduction and metabolic balance through dual hormone targeting.",
       image: "/images/mounjaro-main.jpeg",
     },
         {
-      name: "Wegovy (Semaglutide)",
+      name: "Elite Medicines Overview",
       slug: "wegovy",
       price: clinicVariables.PRICING.WEGOVY["0.25mg"],
       highlights: [
@@ -34,7 +34,7 @@ export default function TreatmentsPage() {
         "Lose up to 15% weight",
       ],
       description:
-        "Helps reduce appetite and calorie intake for effective weight management.",
+        "Clinically proven to curb appetite and reduce calorie intake for effective long-term results.",
       image: "/images/wegovy-main.png",
     },
   ];
@@ -53,11 +53,11 @@ export default function TreatmentsPage() {
         <div className="relative z-10 px-4  sm:px-6 lg:p-8  text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
           <span className="text-emerald-700">
-            Clinically Proven
-          </span> Weight Loss Solutions
+            Real Results
+          </span> Real Support Real Science
         </h1>
         <p className="text-xl text-gray-700 mb-2">
-          FDA-approved medications combined with personalized medical support for sustainable results
+          Weight loss solutions that combine medication with expert care.
         </p>
 
       </div>
@@ -120,7 +120,7 @@ export default function TreatmentsPage() {
               Compare Treatments
             </span>
             <h2 className="text-3xl font-bold text-gray-900">
-              Mounjaro vs. Wegovy
+              Explore the Benefits
             </h2>
           </div>
           <div className="py-12 px-4 sm:px-6 lg:px-8">
@@ -131,47 +131,53 @@ export default function TreatmentsPage() {
     <thead className="bg-gray-50">
       <tr>
         <th className="px-6 py-4 text-left text-sm font-bold text-gray-700 uppercase tracking-wider bg-gray-100 rounded-tl-xl">
-          Treatment Details
+          Treatment Benefits
         </th>
         <th className="px-6 py-4 text-center text-sm font-bold text-white uppercase tracking-wider bg-gradient-to-r from-emerald-600 to-emerald-500 relative">
-          <span className="relative z-10">Mounjaro</span>
+          <span className="relative z-10">Transformative Treatments</span>
           
         </th>
         <th className="px-6 py-4 text-center text-sm font-bold text-white uppercase tracking-wider bg-gradient-to-r from-blue-400 to-blue-500 relative rounded-tr-xl">
-          Wegovy
+          Elite Medicines
         </th>
       </tr>
     </thead>
     <tbody className="bg-white divide-y divide-gray-200">
       {[
         { 
-          name: "Active Ingredient", 
-          mounjaro: "Tirzepatide", 
-          wegovy: "Semaglutide",
+          name: "Approach", 
+          mounjaro: "Dual-action mechanism supporting appetite", 
+          wegovy: "Focused appetite regulation for steady",
           highlight: false
         },
         { 
-          name: "Expected Weight Loss", 
-          mounjaro: "Around 20% of body weight", 
-          wegovy: "Around 15% of body weight",
+          name: "Weight Loss Potential", 
+          mounjaro: "Up to 20% body weight reduction ", 
+          wegovy: "Clinically proven lose upto 15% body weight",
           highlight: true
         },
         { 
-          name: "Dosing Frequency", 
-          mounjaro: "Once weekly injection", 
-          wegovy: "Once weekly injection",
+          name: "Injection Frequency", 
+          mounjaro: "Once-weekly injection for long-lasting", 
+          wegovy: "Once-weekly injection ",
           highlight: false
         },
         { 
-          name: "Eligibility Criteria", 
-          mounjaro: "BMI ≥30 or ≥27 *", 
-          wegovy: "BMI ≥30 or ≥27 *",
+          name: "Additional Benefits", 
+          mounjaro: "Supports metabolic health ", 
+          wegovy: "Helps reduce daily cravings",
           highlight: false
         },
         { 
-          name: "Prescription Required", 
-          mounjaro: "Yes - In-person consultation", 
-          wegovy: "Yes - In-person consultation",
+          name: "Best For", 
+          mounjaro: "Those seeking powerful, ", 
+          wegovy: "Those looking for targeted",
+          highlight: false
+        },
+        { 
+          name: "Medical Supervision", 
+          mounjaro: "Personalized, in-person support", 
+          wegovy: "Personalized, in-person support",
           highlight: false
         }
       ].map((row, index) => (

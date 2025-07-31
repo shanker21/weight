@@ -4,8 +4,9 @@ import path from 'path';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Altrincham Travel Clinic",
-  description: "Read our terms and conditions...",
+  title: "Terms of Service | WeightGone Weight Loss Clinic UK",
+  description: "View the terms of service outlining your rights and responsibilities while using WeightGone’s trusted weight loss programs and services.",
+  keywords: "terms of service, weight loss clinic terms, WeightGone policies, service terms weight loss, WeightGone UK terms."
 };
 
 export default function TermsAndConditions() {
