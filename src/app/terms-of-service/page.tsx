@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function TermsAndConditions() {
-  const filePath = path.join(process.cwd(), 'Terms and Condition-WG.md');
+  const filePath = path.join(process.cwd(), 'terms-and-condition-wg.md');
   const content = fs.readFileSync(filePath, 'utf8');
 
   return (
