@@ -1,4 +1,4 @@
-## Privacy Policy
+## Weight Loss Privacy Policy
 
 ### Last updated: 17th May 2025
 

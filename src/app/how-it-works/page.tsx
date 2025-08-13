@@ -47,7 +47,7 @@ const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">Our Attentive yet Effective Process</h1>
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">Weight Loss Programmes</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Get started with your weight loss treatment in just a few easy steps
           </p>

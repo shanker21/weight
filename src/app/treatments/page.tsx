@@ -53,8 +53,8 @@ export default function TreatmentsPage() {
         <div className="relative z-10 px-4  sm:px-6 lg:p-8  text-center">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
           <span className="text-emerald-700">
-            Real Results
-          </span> Real Support Real Science
+            Weight Loss Treatments
+          </span>
         </h1>
         <p className="text-xl text-gray-700 mb-2">
           Weight loss solutions that combine medication with expert care.

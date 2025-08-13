@@ -108,7 +108,7 @@ const variants = Object.keys(clinicVariables.PRICING.WEGOVY).map((dosage) => ({
           </div>
 
           <div className="md:w-1/2">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Wegovy (Semaglutide)</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Wegovy Injection in Manchester</h1>
             <p className="text-lg text-gray-600 mb-4">by Novo Nordisk</p>
 
             {/* Variant Selection */}

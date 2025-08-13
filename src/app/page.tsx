@@ -103,9 +103,9 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center gap-8">
               <div className="md:w-1/2 z-10">
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                  Transform Your <br /><span className="bg-gradient-to-t to-emerald-800 from-blue-800 bg-clip-text text-transparent">Life with</span><br />
+                 Weight Loss<br /><span className="bg-gradient-to-t to-emerald-800 from-blue-800 bg-clip-text text-transparent">Clinic</span><br />
                   {/* <span className="text-emerald-600">Safely</span> and{" "} */}
-                  <span className="text-emerald-900">WeightGone UK</span>
+                  <span className="text-emerald-900">Manchester </span>
                 </h1>
                 <p className="text-xl text-gray-600 mb-8">
                   Clinically proven procedures, breakthrough medications and unmatched support face‑to‑face across the UK.

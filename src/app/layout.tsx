@@ -54,6 +54,9 @@ export const metadata: Metadata = {
       },
     ],
   },
+   alternates: {
+    canonical: "https://www.weightgone.co.uk/",
+  },
 };
 
 export default function RootLayout({

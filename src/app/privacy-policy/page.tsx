@@ -6,7 +6,10 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Privacy Policy | WeightGone UK",
   description: "Read our privacy policy to understand how WeightGone protects your data and maintains confidentiality for every client.",
-  keywords: "weight loss privacy policy, WeightGone data protection, patient confidentiality, privacy WeightGone, privacy policy UK."
+  keywords: "weight loss privacy policy, WeightGone data protection, patient confidentiality, privacy WeightGone, privacy policy UK.",
+  alternates: {
+    canonical: "https://www.weightgoneuk.co.uk/privacy-policy"
+  }
 };
 
 export default function PrivacyPolicy() {

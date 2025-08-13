@@ -68,7 +68,7 @@ export default function ContactPage() {
   
   <div className="relative z-10 px-4 sm:px-6 lg:p-6">
     <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4 leading-tight">
-      Let's Start Your <span className="text-emerald-700">Weight Loss Journey</span> Together
+      Contact <span className="text-emerald-700"> Weight Loss </span> Clinic
     </h1>
     <p className="text-xl text-gray-700 max-w-3xl mx-auto">
       Our specialists are ready to guide you - ask us anything about treatments, pricing, or getting started

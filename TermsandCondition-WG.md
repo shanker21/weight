@@ -1,5 +1,5 @@
 
-## Terms and Conditions
+## Weight Loss Clinic Terms
 
 ### Last updated: 17th May 2025
 

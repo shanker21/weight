@@ -104,7 +104,7 @@ const variants = Object.keys(clinicVariables.PRICING.MOUNJARO).map((dosage) => (
           </div>
 
           <div className="md:w-1/2">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">Mounjaro (Tirzepatide)</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">Mounjaro Weight Loss Injection uk</h1>
             <p className="text-lg text-gray-600 mb-4">by Eli Lilly</p>
  <div className="mb-6">
         <div className="flex flex-wrap gap-2">
